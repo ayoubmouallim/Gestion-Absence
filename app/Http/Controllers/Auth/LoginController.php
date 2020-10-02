@@ -7,7 +7,7 @@ use App\Providers\RouteServiceProvider;
 
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-
+use Auth;
 class LoginController extends Controller
 {
     /*
@@ -22,7 +22,34 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+    protected $redirectTo;
 
+    public function redirectTo()
+    {
+        switch(Auth::user()->id_role){
+            case 1:
+            $this->redirectTo = '/admin';
+            return $this->redirectTo;
+                break;
+            case 2:
+                    $this->redirectTo = '/login';
+                return $this->redirectTo;
+                break;
+            case 3:
+                $this->redirectTo = '/login';
+                return $this->redirectTo;
+                break;
+            case 4:
+                    $this->redirectTo = '/login';
+                return $this->redirectTo;
+                break;
+            default:
+                $this->redirectTo = '/login';
+                return $this->redirectTo;
+        }
+         
+        // return $next($request);
+    } 
     /**
      * Where to redirect users after login.
      *
