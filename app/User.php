@@ -1,6 +1,9 @@
 <?php
 
 namespace App;
+use App\Role;
+use App\Etudiant;
+use App\Enseignant;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -40,4 +43,11 @@ class User extends Authenticatable
         return $this->belongsTo('App\Role');
     }
 
+    public function etudiant(){
+        return $this->hasOne('App\Etudiant');
+    }
+
+    public function prof(){
+        return $this->hasOne('App\Enseignant');
+    }
 }
