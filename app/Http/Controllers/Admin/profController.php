@@ -22,6 +22,7 @@ class profController extends Controller
 
     public function save(Request $request)
     {
+        //return $request;
         $user = new User;
         $email= $request->input('email');
         $password =  Hash::make($request->input('password'));
@@ -40,10 +41,10 @@ class profController extends Controller
         $adresse = $request->input('adresse');
         $phone = $request->input('tel');
 
-        $prof->nom_etu = $nom;
-        $prof->prenom_etu = $prenom;
-        $prof->adresse_etu = $adresse;
-        $prof->phone_etu = $phone;
+        $prof->nom_ens = $nom;
+        $prof->prenom_ens = $prenom;
+        $prof->adresse_ens = $adresse;
+        $prof->phone_ens = $phone;
         $prof->id_user = $iduser;
         $prof->save();
         

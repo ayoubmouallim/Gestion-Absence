@@ -24,6 +24,9 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        @if (Session::has('success'))
+         <div class="alert alert-success"> {{ Session::get('success') }} </div>
+        @endif
         <div class="row">
           <div class="col-12">
             <div class="card">
@@ -36,61 +39,39 @@
                     <th>Nom</th>
                     <th>Filiere</th>
                     <th>Prof</th>
+                    <th>Semestre</th>
                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.5
-                    </td>
-                    <td>Win 95+</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 6
-                    </td>
-                    <td>Win 98+</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
-                    <td>Win XP</td>
-                    <td>A</td>
-                  </tr>
-                  
+                    @isset($matieres)
+                    @foreach ($matieres as $matiere)
+                    <tr>
+                      <td>{{$matiere->nom_mat}}</td>
+                      <td>{{$matiere->filieremat->nom_filiere}}</td>
+                      <td>{{$matiere->enseignantMatiere->nom_ens}}</td>
+                      <td>{{$matiere->semestre->nom_sem}}</td>
+                      <td>
+                        <ul class="list-inline m-0">
+                 
+                          <li class="list-inline-item">
+                          <a href="{{ route('edit.matiere',$matiere->id) }}">  <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="{{ route('delete.matiere',$matiere->id) }}"> <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></a>
+                          </li>
+                      </ul>
+                      </td>
+                    </tr>
+                    @endforeach
+                @endisset                
                   </tbody>
                   <tfoot>
                   <tr>
                     <th>Nom</th>
                     <th>Filiere</th>
                     <th>Prof</th>
+                    <th>Semestre</th>
                     <th>Action</th>
                   </tr>
                   </tfoot>

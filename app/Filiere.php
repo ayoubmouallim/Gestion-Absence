@@ -13,6 +13,9 @@ class Filiere extends Model
     protected $fillable = [
         'id', 'nom_filiere','id_dep'
     ];
+    protected $hidden = [
+        'created_at','updated_at'
+    ];
 
     public function etudiantfiliere()
 {

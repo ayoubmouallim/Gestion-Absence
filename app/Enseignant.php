@@ -13,6 +13,9 @@ class Enseignant extends Model
     protected $fillable = [
         'id','nom_ens','prenom_ens','phone_ens','adresse_ens','id_user'
     ];
+    protected $hidden = [
+        'created_at','updated_at'
+    ];
     public function userprof(){
         return $this->belongsTo('App\User','id_user');
     

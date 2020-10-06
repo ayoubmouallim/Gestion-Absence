@@ -11,6 +11,9 @@ class Semestre extends Model
     protected $fillable = [
         'nom_sem'
     ];
+    protected $hidden = [
+        'created_at','updated_at'
+    ];
 
     public function semestreMatiere()
 {

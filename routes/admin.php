@@ -20,13 +20,19 @@ Route::group(['namespace' => 'Admin'], function () {
         
         Route::get('/addTeacher','profController@addProf')->name("add.prof");
         Route::get('/showAll','profController@showAllProf')->name("show.all.prof");
+        Route::post('/saveProf','profController@save')->name('save');
 
     });
 
     Route::group(['prefix' => 'matiere'], function () {
         
-        Route::get('/addMatiere','matiereController@addProf')->name("add.matiere");
-        Route::get('/showAll','matiereController@showAllProf')->name("show.all.matiere");
+        Route::get('/addMatiere','matiereController@addMatiere')->name("add.matiere");
+        Route::get('/showAll','matiereController@showAllMatiere')->name("show.all.matiere");
+
+        Route::post('/saveMatiere','matiereController@saveMatiere')->name("save.matiere");
+        Route::get('edit/{id}','matiereController@editMatiere')->name("edit.matiere");
+        Route::get('delete/{id}','matiereController@deleteMatiere')->name("delete.matiere");
+        Route::post('update','matiereController@updateMatiere')->name("update.matiere");
     });
 
 
