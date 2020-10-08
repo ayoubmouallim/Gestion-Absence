@@ -15,10 +15,11 @@ class CreateEnseignantsTable extends Migration
     {
         Schema::create('enseignants', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nom_etu');
-            $table->string('prenom_etu');
-            $table->integer('phone_etu');
-            $table->text('adresse_etu');
+            $table->engine = 'InnoDB';
+            $table->string('nom_ens');
+            $table->string('prenom_ens');
+            $table->integer('phone_ens');
+            $table->text('adresse_ens');
             $table->timestamps();
         });
     }

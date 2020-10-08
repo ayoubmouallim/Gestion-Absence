@@ -15,6 +15,7 @@ class CreateSemestresTable extends Migration
     {
         Schema::create('semestres', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
             $table->string('nom_sem',10);
             $table->timestamps();
         });

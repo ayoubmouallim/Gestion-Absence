@@ -15,6 +15,7 @@ class CreateSeancesTable extends Migration
     {
         Schema::create('seances', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
             $table->date('date');
             $table->integer('heure_debut');
             $table->integer('heure_fin');

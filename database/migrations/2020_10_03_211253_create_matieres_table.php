@@ -15,6 +15,7 @@ class CreateMatieresTable extends Migration
     {
         Schema::create('matieres', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->engine = 'InnoDB';
             $table->string('nom_mat',25);
            
             $table->timestamps();

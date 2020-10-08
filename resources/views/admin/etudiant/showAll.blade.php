@@ -8,13 +8,13 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>DataTables</h1>
+            <h1>Gestion des étudiants</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Etudiants</li>
-              <li class="breadcrumb-item active">Show All</li>
+              <li class="breadcrumb-item active">Ajouter</li>
+              <li class="breadcrumb-item active">Modifier</li>
             </ol>
           </div>
         </div>
@@ -24,12 +24,13 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        @if (Session::has('success'))
+         <div class="alert alert-success"> {{ Session::get('success') }} </div>
+        @endif
         <div class="row">
           <div class="col-12">
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">DataTable with minimal features & hover style</h3>
-              </div>
+              
               <!-- /.card-header -->
               <div class="card-body">
                 <table id="example2" class="table table-bordered table-hover">
@@ -38,72 +39,35 @@
                     <th>CNE</th>
                     <th>Nom</th>
                     <th>Prenom</th>
-                    <th>Email</th>
-                    <th>Filiere</th>
+                    <th>Phone</th>
+                    <th>Filière</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.5
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5.5</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 6
-                    </td>
-                    <td>Win 98+</td>
-                    <td>6</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td>7</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
-                    <td>Win XP</td>
-                    <td>6</td>
-                    <td>A</td>
-                  </tr>
-                  
+                    @isset($students)
+                    @foreach ($students as $student)
+                    <tr>
+                      <td>{{$student->cne}}</td>
+                      <td>{{$student->nom_etu}}</td>
+                      <td>{{$student->prenom_etu}}</td>
+                      <td>{{$student->phone_etu}}</td>
+                      <td>{{$student->filiere->nom_filiere}}</td>
+                    
+                      <td>
+                        <ul class="list-inline m-0">
+                          <li class="list-inline-item">
+                          <a href="{{ route('edit.student',$student->id) }}">  <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="{{ route('delete.student',$student->id) }}"> <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></a>
+                          </li>
+                      </ul>
+                      </td>
+                    </tr>
+                    @endforeach
+                @endisset                
                   </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>CNE</th>
-                    <th>Nom</th>
-                    <th>Prenom</th>
-                    <th>Email</th>
-                    <th>Filiere</th>
-                  </tr>
-                  </tfoot>
                 </table>
               </div>
               <!-- /.card-body -->

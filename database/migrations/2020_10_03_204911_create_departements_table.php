@@ -15,6 +15,7 @@ class CreateDepartementsTable extends Migration
     {
         Schema::create('departements', function (Blueprint $table) {
             $table->id();
+            $table->engine = 'InnoDB';
             $table->string('nom_dep',20);
             $table->timestamps();
         });

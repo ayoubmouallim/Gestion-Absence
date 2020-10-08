@@ -15,6 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             Schema::dropIfExists('users');
+            $table->engine = 'InnoDB';
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
