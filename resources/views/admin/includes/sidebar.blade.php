@@ -134,13 +134,13 @@
             <li class="nav-item">
               <a href="{{ route("show.all.student") }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Show All</p>
+                <p>Liste Des Etudiants</p>
               </a>
             </li>
             <li class="nav-item">
             <a href="{{ route("add.student") }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Add Student</p>
+                <p>Ajouter un Etudiant</p>
               </a>
             </li>
             
@@ -152,7 +152,7 @@
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-table"></i>
             <p>
-              Enseignant
+              Enseignants
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>
@@ -160,13 +160,13 @@
             <li class="nav-item">
               <a href="{{ route("show.all.prof") }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Show All</p>
+                <p>Liste Des Enseignants</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route("add.prof") }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Add Teacher</p>
+                <p>Ajouter un Enseignant</p>
               </a>
             </li>
             
@@ -186,13 +186,13 @@
             <li class="nav-item">
               <a href="{{ route("show.all.matiere") }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Show All</p>
+                <p>Liste Des Matieres</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route("add.matiere") }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Add matiere</p>
+                <p>Ajouter un Matiere</p>
               </a>
             </li>
             

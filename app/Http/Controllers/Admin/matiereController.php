@@ -48,7 +48,7 @@ class matiereController extends Controller
                 ]
                 );
                    
-                return redirect()->route('show.all.matiere')->with(['success' => 'matiere added successfuly']);
+                return redirect()->route('show.all.matiere')->with(['success' => 'Matiere bien Ajoute']);
                 
             } catch (\Exception $ex) {
                 
@@ -92,7 +92,7 @@ class matiereController extends Controller
             'id_ens' => $request->prof,
           ]);
                
-            return redirect()->route('show.all.matiere')->with(['success' => 'matiere added successfuly']);
+            return redirect()->route('show.all.matiere')->with(['update' => 'Matiere Bien modifie']);
             
         } catch (\Exception $ex) {
             
@@ -109,7 +109,7 @@ class matiereController extends Controller
            redirect() -> route('show.all.matiere') -> with(['error' => 'Matiere Does not exist']);
 
            Matiere::where('id',$id) -> delete();
-           return redirect()->route('show.all.matiere')->with(['success' => 'matiere deleted successfuly']); 
+           return redirect()->route('show.all.matiere')->with(['delete' => 'Matiere est supprime avec succes']); 
     }
 
     

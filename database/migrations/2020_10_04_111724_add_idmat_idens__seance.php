@@ -15,8 +15,12 @@ class AddIdmatIdensSeance extends Migration
     {
         Schema::table('seances', function (Blueprint $table) {
             //
-            $table->foreignId('id_ens')->constrained('enseignants');
-            $table->foreignId('id_mat')->constrained('matieres');
+            $table->foreignId('id_ens')->constrained('enseignants')
+            ->onDelete('cascade');
+
+            $table->foreignId('id_mat')->constrained('matieres')
+            ->onDelete('cascade');
+
         });
     }
 

@@ -12,13 +12,6 @@
           
             <h1>Gestion des étudiant</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Enseignant</li>
-              <li class="breadcrumb-item active">Add Teacher</li>
-            </ol>
-          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -53,6 +46,10 @@
                  @if (Session::has('error'))
                      <div class="alert alert-danger"> {{ Session::get('error') }} </div>
                  @endif
+                  
+                 @if (Session::has('success'))
+                     <div class="alert alert-danger"> {{ Session::get('success') }} </div>
+                 @endif
                  <div class="row">
                   <div class="col-md-6">
                      <div class="form-group">
@@ -73,7 +70,7 @@
                  </div>
                 <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Phone</label>
+                    <label>Numero de Telephone</label>
                     <input type="text" name="phone" class="form-control ">
                   </div>
                 <!-- /.form-group -->

@@ -7,16 +7,9 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Update Matiere</h1>
+            <h1>Modifier Matiere</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Matiere</li>
-              <li class="breadcrumb-item active">Update Matiere</li>
-            </ol>
-          </div>
-        </div>
+         
       </div><!-- /.container-fluid -->
     </section>
 
@@ -26,7 +19,7 @@
        
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Update Matiere</h3>
+        <h3 class="card-title">Modifier Matiere</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -108,7 +101,7 @@
         <!-- hidden input to pass id -->
     <input type="hidden" name="id" value="{{ $matiere->id }}">
 
-          <input type="submit" value="Update" class="btn btn-primary">
+          <input type="submit" value="Modifier" class="btn btn-primary">
       </form>
       </div>
       <!-- /.card-body -->

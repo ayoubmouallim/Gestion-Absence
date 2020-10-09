@@ -15,7 +15,9 @@ class AddIduserEnseignant extends Migration
     {
         Schema::table('enseignants', function (Blueprint $table) {
             //
-            $table->foreignId('id_user')->constrained('users');
+            $table->foreignId('id_user')->constrained('users')
+            ->onDelete('cascade');
+
 
         });
     }

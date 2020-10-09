@@ -15,8 +15,12 @@ class AddIdseaIdetuAbsence extends Migration
     {
         Schema::table('absences', function (Blueprint $table) {
             //
-            $table->foreignId('id_sea')->constrained('seances');
-            $table->foreignId('id_etu')->constrained('etudiants');
+            $table->foreignId('id_sea')->constrained('seances')
+            ->onDelete('cascade');
+
+            $table->foreignId('id_etu')->constrained('etudiants')
+            ->onDelete('cascade');
+
         });
     }
 

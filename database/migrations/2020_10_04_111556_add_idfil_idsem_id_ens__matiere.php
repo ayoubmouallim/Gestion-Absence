@@ -15,9 +15,15 @@ class AddIdfilIdsemIdEnsMatiere extends Migration
     {
         Schema::table('matieres', function (Blueprint $table) {
             //
-            $table->foreignId('id_filiere')->constrained('filieres');
-            $table->foreignId('id_sem')->constrained('semestres');
-            $table->foreignId('id_ens')->constrained('enseignants');
+            $table->foreignId('id_filiere')->constrained('filieres')
+            ->onDelete('cascade');
+
+            $table->foreignId('id_sem')->constrained('semestres')
+            ->onDelete('cascade');
+
+            $table->foreignId('id_ens')->constrained('enseignants')
+            ->onDelete('cascade');
+
         });
     }
 

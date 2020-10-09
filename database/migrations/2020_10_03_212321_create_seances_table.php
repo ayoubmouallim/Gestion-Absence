@@ -14,12 +14,13 @@ class CreateSeancesTable extends Migration
     public function up()
     {
         Schema::create('seances', function (Blueprint $table) {
-            $table->bigIncrements('id');
             $table->engine = 'InnoDB';
+            $table->bigIncrements('id');
             $table->date('date');
+            $table->string('type');
+            $table->boolean('active');
             $table->integer('heure_debut');
             $table->integer('heure_fin');
-            
 
             $table->timestamps();
         });

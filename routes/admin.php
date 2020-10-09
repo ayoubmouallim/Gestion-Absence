@@ -14,6 +14,11 @@ Route::group(['namespace' => 'Admin'], function () {
         Route::get('/addTeacher','profController@addProf')->name("add.prof");
         Route::get('/showAll','profController@showAllProf')->name("show.all.prof");
         Route::post('/saveProf','profController@save')->name('save');
+        Route::get('/edit/{id}','profController@editprof')->name('editprof');
+        Route::put('/update/{id}','profController@updateprof')->name('updateprof');
+        Route::get('/delete/{id}','profController@deleteprof')->name('deleteprof');
+
+
     });
 
     Route::group(['prefix' => 'student'], function () {

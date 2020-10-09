@@ -50,7 +50,7 @@ class etudiantController extends Controller
                 ]
                 );
                 //afficher un message de success si  les données des etudiants sont bein enregistrées 
-                return redirect()->route('show.all.student')->with(['success' => ' Etudiant est Bein ajouté ']);
+                return redirect()->route('show.all.student')->with(['success' => ' Etudiant est Bien ajouté ']);
                 
             } catch (\Exception $ex) {
                 //afficher un message d'erreur  si  les données des etudiants ne sont pas bein enregistrées 
@@ -88,7 +88,7 @@ class etudiantController extends Controller
                     'id_user'=> 4
                 ]);
                 // un message de success afficher si les données sont bein modifiées 
-                return redirect()->route('show.all.student')->with(['success' => ' Etudiant est Bein modifié ']);
+                return redirect()->route('show.all.student')->with(['update' => ' Etudiant est Bien modifié ']);
                 
             } catch (\Exception $ex) {
                 //  // un message d'erreur  s'il y a pas de modification 
@@ -104,7 +104,7 @@ class etudiantController extends Controller
            redirect() -> route('show.all.student') -> with(['error' => 'student Does not exist']);
 
            Etudiant::where('id',$id) -> delete();
-           return redirect()->route('show.all.student')->with(['success' => 'student deleted successfuly']); 
+           return redirect()->route('show.all.student')->with(['delete' => 'Etudiant est supprime avec succes']); 
     }
 
 }

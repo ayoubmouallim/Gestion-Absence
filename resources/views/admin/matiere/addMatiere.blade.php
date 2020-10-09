@@ -8,15 +8,9 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Matiere</h1>
+            <h1>Ajouter Matiere</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Matiere</li>
-              <li class="breadcrumb-item active">Add Matiere</li>
-            </ol>
-          </div>
+         
         </div>
       </div><!-- /.container-fluid -->
     </section>
@@ -27,7 +21,7 @@
        
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Add Matiere</h3>
+            <h3 class="card-title">Ajouter Matiere</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -107,7 +101,7 @@
                 </div>
                 <!-- /.col -->
               </div>
-              <input type="submit" value="submit" class="btn btn-primary">
+              <input type="submit" value="ajouter" class="btn btn-primary">
           </form>
           </div>
           <!-- /.card-body -->

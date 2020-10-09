@@ -15,7 +15,9 @@ class AddIddepFiliere extends Migration
     {
         Schema::table('filieres', function (Blueprint $table) {
             //
-            $table->foreignId('id_dep')->constrained('departements');
+            $table->foreignId('id_dep')->constrained('departements')
+            ->onDelete('cascade');
+
 
         });
     }

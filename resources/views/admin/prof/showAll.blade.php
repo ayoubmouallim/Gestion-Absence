@@ -10,19 +10,22 @@
           <div class="col-sm-6">
             <h1>Enseignant</h1>
           </div>
-          <div class="col-sm-6">
-            <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Enseignant</li>
-              <li class="breadcrumb-item active">Show All</li>
-            </ol>
-          </div>
         </div>
       </div><!-- /.container-fluid -->
     </section>
 
     <!-- Main content -->
     <section class="content">
+    <div class="container-fluid">
+        @if (Session::has('success'))
+         <div class="alert alert-warning"> {{ Session::get('success') }} </div>
+        @endif
+        @if (Session::has('ajoute'))
+         <div class="alert alert-success"> {{ Session::get('ajoute') }} </div>
+        @endif
+        @if (Session::has('delete'))
+         <div class="alert alert-danger"> {{ Session::get('delete') }} </div>
+        @endif
       <div class="container-fluid">
         <div class="row">
           <div class="col-12">
@@ -35,74 +38,35 @@
                   <tr>
                     <th>Nom</th>
                     <th>Prenom</th>
-                    <th>Email</th>
-                    <th>Adress</th>
-                    <th>Departement</th>
+                    <th>Adresse</th>
+                    <th>Numero de Telephone</th>
+                    <th>Action</th>
+
                   </tr>
                   </thead>
                   <tbody>
+                  @foreach($profs as $p)
                   <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 4.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td> 4</td>
-                    <td>X</td>
+
+                    <td>{{ $p->nom_ens }}</td>
+                    <td>{{ $p->prenom_ens }}</td>
+
+                    <td>{{ $p->adresse_ens }}</td>
+                    <td>{{ $p->phone_ens }}</td>
+                    <td> <ul class="list-inline m-0">
+                          <li class="list-inline-item">
+                          <a href="{{ route('editprof',$p->id)  }}">  <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i class="fa fa-edit"></i></button></a>
+                          </li>
+                          <li class="list-inline-item">
+                            <a href="{{ route('deleteprof',$p->id ) }}"> <button class="btn btn-danger btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Delete"><i class="fa fa-trash"></i></button></a>
+                          </li>  
+                        </ul></td>
                   </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.0
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5</td>
-                    <td>C</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 5.5
-                    </td>
-                    <td>Win 95+</td>
-                    <td>5.5</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet
-                      Explorer 6
-                    </td>
-                    <td>Win 98+</td>
-                    <td>6</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>Internet Explorer 7</td>
-                    <td>Win XP SP2+</td>
-                    <td>7</td>
-                    <td>A</td>
-                  </tr>
-                  <tr>
-                    <td>Trident</td>
-                    <td>AOL browser (AOL desktop)</td>
-                    <td>Win XP</td>
-                    <td>6</td>
-                    <td>A</td>
-                  </tr>
+
+                   @endforeach
                   
-                  </tbody>
-                  <tfoot>
-                  <tr>
-                    <th>Nom</th>
-                    <th>Prenom</th>
-                    <th>Email</th>
-                    <th>Adress</th>
-                    <th>Departement</th>
-                  </tr>
-                  </tfoot>
-                </table>
+</tbody>                
+</table>
               </div>
               <!-- /.card-body -->
             </div>
