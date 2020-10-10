@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 // 
 
+Route::view('/Etudiant','Etudiant.EspaceEtudiant');
+Route::view('/Prof','Enseignant.EspaceProf');
+Route::view('/Administration','administration.administration');

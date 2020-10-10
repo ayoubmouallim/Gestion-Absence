@@ -33,15 +33,15 @@ class LoginController extends Controller
             return $this->redirectTo;
                 break;
             case 2:
-                    $this->redirectTo = '/login';
+                    $this->redirectTo = '/Administration';
                 return $this->redirectTo;
                 break;
             case 3:
-                $this->redirectTo = '/login';
+                $this->redirectTo = '/Prof';
                 return $this->redirectTo;
                 break;
             case 4:
-                    $this->redirectTo = '/login';
+                    $this->redirectTo = '/Etudiant';
                 return $this->redirectTo;
                 break;
             default:
