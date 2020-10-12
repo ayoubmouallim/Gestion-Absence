@@ -33,7 +33,7 @@
 
   <!-- Begin Sidebar  -->
   
-  @include('admin.includes.sidebar')
+      @include('admin.includes.sidebar')
 <!-- End Sidebar  -->
 
   
@@ -67,8 +67,6 @@
 <script src="{{asset("addmin/plugins/datatables-buttons/js/dataTables.buttons.min.js")}}"></script>
 <script src="{{asset("addmin/plugins/datatables-buttons/js/buttons.bootstrap4.min.js")}}"></script>
 
-
-
 <!-- jQuery -->
 <script src="{{asset("addmin/plugins/jquery/jquery.min.js")}}"></script>
 <!-- Bootstrap -->
@@ -82,7 +80,5 @@
 <script src="{{asset("addmin/dist/js/demo.js")}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset("addmin/dist/js/pages/dashboard3.js")}}"></script>
-
-
 </body>
 </html>

@@ -1,23 +1,48 @@
-@extends('layouts.app')
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard Prof</div>
+ @extends('layouts.enseignant')
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+ @section('content')
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
+   <section class="about text-center">
+     <div class="container">
+     <h1>Espace <span>professeurs</span> </h1>
+     <p class="lead">Beinvenue dans votre espace ,vous pouvez utiliser cette application <strong> Gestion des absences </strong> pour créer des séances dans votre matières et noter les abseances 
+       et consulter l'historique des absences des étudiants 
+     </p>
     </div>
-</div>
-@endsection
+   </section>
+
+   <section class="features text-center">
+    <div class="container">
+      <h1>Services</h1>
+      <div class="row"><!-- featues1 -->
+        <div class=" col-md-4  col-xs-12 ">
+          <div class="feat"> <!--my div -->
+            <i class="fa fa-pencil"  style="font-size:48px;" aria-hidden="true"></i>
+            <h4>Créer une séance</h4>
+           <p class="lead">Créer une séance ou dans laquelle vous pouvez noter l'absence</p>
+           <a href="#" class="btn btn-primary">Start</a>
+          </div>
+        </div>
+                   <div class=" col-md-4  col-xs-12 ">
+          <div class="feat"> <!--my div -->
+            <i class="fa fa-check-square-o" style="font-size:48px;" aria-hidden="true"></i>
+           <h4> Enregistrer les absences</h4>
+           <p class="lead"> Enregistrer les absences à propos les séances que vous avez créés </p>
+           <a href="#" class="btn btn-primary">Start</a>
+          </div>
+        </div>
+           
+   
+        <div class=" col-md-4  col-xs-12 ">
+          <div class="feat"> <!--my div -->
+            <i class="fa fa-newspaper-o" style="font-size:48px;" aria-hidden="true"></i>
+           <h4>Consulter l'historique </h4>
+           <p class="lead"> Consulter l'historique des absenses des etudiants dans votre matière</p>
+           <a href="#" class="btn btn-primary">Start</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>     
+ @endsection

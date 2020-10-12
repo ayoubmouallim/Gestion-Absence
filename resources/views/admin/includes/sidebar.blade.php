@@ -9,7 +9,6 @@
   <div class="sidebar">
     <!-- Sidebar user panel (optional) -->
     
-
     <!-- SidebarSearch Form -->
     <br>
     <div class="form-inline">
