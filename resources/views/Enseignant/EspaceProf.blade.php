@@ -6,8 +6,8 @@
    <section class="about text-center">
      <div class="container">
      <h1>Espace <span>professeurs</span> </h1>
-     <p class="lead">Beinvenue dans votre espace ,vous pouvez utiliser cette application <strong> Gestion des absences </strong> pour créer des séances dans votre matières et noter les abseances 
-       et consulter l'historique des absences des étudiants 
+     <p class="lead">Bienvenue dans votre espace ,vous pouvez utiliser cette application <strong> Gestion des absences </strong> pour créer des séances dans votre matières et enregistrer  les absences 
+      et consulter l'historique des absences des étudiants 
      </p>
     </div>
    </section>

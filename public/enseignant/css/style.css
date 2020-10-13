@@ -32,6 +32,39 @@ body{
     color: blue;
     background-color:white;
   }
+  .navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+    height: 162px;
+    color: red;
+    background-color: #f8f9fa;
+    border-top: 3px solid rgb(42, 42, 204);
+    border-top-color:rgb(42, 42, 204);
+    border-top-style: solid;
+    border-top-width: 4px;
+    margin-top: 7px;
+    padding-top: 7px;
+    min-width: 150px;
+}
+
+.dropdown-menu .dropdown-item {
+    padding-top: 13px;
+}
+.dropdown-menu .dropdown-item {
+    padding: 9px 20px;
+    margin-bottom: 7px;
+    
+}
+.dropdown-menu .dropdown-item:hover {
+    color: white;
+    background: rgb(42, 42, 204);
+    padding-left: 30px;
+ -webkit-transition: padding 0.5s ease;
+ -moz-transition: padding 0.5s ease;
+ -o-transition: padding 0.5s ease;
+ transition: padding 0.5s ease;   
+}
+
 /* start section about  */
 .about {
     padding-top: 40px;

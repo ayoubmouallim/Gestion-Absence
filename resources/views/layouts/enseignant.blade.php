@@ -23,17 +23,19 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Accuiel <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
               </li>   
-              <li class="nav-item">
-                <a class="nav-link" href="#">A propos</a>
-              </li> 
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a>
-                </li>       
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Services</a>
-                </li>
+
+               <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Servises
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Créer une séance </a>
+                  <a class="dropdown-item" href="#">Enregistrer absence</a>
+                  <a class="dropdown-item" href="#">Consulter l'historique </a>
+                  </div>
+              </li>
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
@@ -54,9 +56,8 @@
           <div class="col-md-6  ">
                   <h3>SiteMap</h3>
                   <ul class="list-unstyled  three-columns">
-                    <li><a href="#">Acueil</a></li>
-                    <li><a href="#">A propos</a></li>
-                    <li><a href="#">Servises</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Contact</a></li>
                     <li><a href="#">Servises</a></li>
                   </ul>
                   <ul class='list-unstyled sosial'>

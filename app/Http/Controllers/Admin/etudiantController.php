@@ -10,7 +10,6 @@ use App\Semestre;
 use App\Enseignant;
 use App\Etudiant;
 
-
 class etudiantController extends Controller
 {
     //la fonction qui permet de retourner le data du filiere u 
