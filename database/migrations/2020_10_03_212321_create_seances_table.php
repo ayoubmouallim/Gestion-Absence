@@ -19,8 +19,8 @@ class CreateSeancesTable extends Migration
             $table->date('date');
             $table->string('type');
             $table->boolean('active');
-            $table->integer('heure_debut');
-            $table->integer('heure_fin');
+            $table->time('heure_debut');
+            $table->time('heure_fin');
 
             $table->timestamps();
         });

@@ -21,7 +21,7 @@
             <i class="fa fa-pencil"  style="font-size:48px;" aria-hidden="true"></i>
             <h4>Créer une séance</h4>
            <p class="lead">Créer une séance ou dans laquelle vous pouvez noter l'absence</p>
-           <a href="#" class="btn btn-primary">Start</a>
+           <a href=" {{ route('create.seance') }} " class="btn btn-primary">Start</a>
           </div>
         </div>
                    <div class=" col-md-4  col-xs-12 ">

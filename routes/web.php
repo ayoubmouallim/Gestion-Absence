@@ -19,11 +19,22 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-// 
+
+
+//--------------  Espace Prof--------------------// 
+Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
+    
+    Route::get('/','ProfController@index');
+    Route::get('/create-seance','ProfController@createSeance')->name('create.seance');
+    Route::post('/save-seance','ProfController@saveSeance')->name('save.seance');
+    Route::get('/list-seance','ProfController@listSeance')->name('list.seance');
+});
+
+//--------------  Espace Prof--------------------// 
+
+
+
 Route::view('/Etudiant','Etudiant.EspaceEtudiant');
-Route::view('/Prof','Enseignant.EspaceProf');
+
 Route::view('/Administration','administration.administration');
 
-// Route::get('/Prof', function () {
-//     return view('Enseignant.EspaceProf');
-// });

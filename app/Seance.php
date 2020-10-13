@@ -13,6 +13,9 @@ class Seance extends Model
     protected $fillable = [
         'id','date','heure_debut','heure_fin','id_mat','id_ens'
    ];
+   protected $hidden =[
+       'created_at','updated_at'
+   ];
     public function enseignantseance(){
         return $this->belongsTo('App\Enseignant','id_ens');
 
