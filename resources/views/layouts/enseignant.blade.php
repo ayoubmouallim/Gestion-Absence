@@ -31,7 +31,7 @@
                   Servises
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Créer une séance </a>
+                  <a class="dropdown-item" href="{{ route('create.seance')}}">Créer une séance </a>
                   <a class="dropdown-item" href="#">Enregistrer absence</a>
                   <a class="dropdown-item" href="#">Consulter l'historique </a>
                   </div>
@@ -39,7 +39,16 @@
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-            <a class="btn btn-primary "  href="#"> Déconnecter</a>
+           
+            <a class=" btn btn-primary" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Deconnecter 
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
           </li>
           </ul>
               

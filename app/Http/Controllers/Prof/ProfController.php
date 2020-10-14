@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Prof;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+use App\Etudiant;
+use App\Filiere;
 
 use App\Matiere;
 use App\Enseignant;
@@ -68,4 +72,21 @@ class ProfController extends Controller
 
         return view('Enseignant.listSeance',compact('seances'));
     }
+
+// fonctions pour noter absence
+public function PageNoteAbsence($id){
+  
+    //retourner id de la seance a partir du liste des seances
+    $seance = Seance::findOrFail($id);
+    $id_matiere = $seance->id_mat;//la matiere de cette seance
+    //recuperer la filiere a partir du id_matiere
+    $filiere = Matiere::find($id_matiere)->filieremat()->get();
+  foreach($filiere as $f){
+
+    $id_fil = $f->id;
+    $etudiants = Etudiant::where('id_filiere',$id_fil)->get();
+  }
+
+    return view('Enseignant.NoterAbsence',compact('seance','etudiants','filiere'));
+}
 }

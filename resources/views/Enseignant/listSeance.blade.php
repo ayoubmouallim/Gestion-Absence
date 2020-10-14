@@ -37,7 +37,7 @@
                <td>{{ $seance-> heure_debut }}</td>
                <td>{{ $seance-> heure_fin }}</td>
                <td>{{ $seance-> type }}</td>
-               <td><a href="#">  <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Noter Absences  <i class="fa fa-edit"></i></button></a></td>
+               <td><a href="{{ route('pageAbsence',$seance->id)}}">  <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Noter Absences  <i class="fa fa-edit"></i></button></a></td>
               </tr>
               
             @endforeach 

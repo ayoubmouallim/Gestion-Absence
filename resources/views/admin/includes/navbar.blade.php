@@ -11,5 +11,15 @@
         <a href="#" class="nav-link">Contact</a>
       </li>
     </ul>
+    <li class="nav-item d-none d-sm-inline">
+    <a class="btn btn-primary" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Deconnecter 
+                                    </a>
 
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+        </li>
   </nav>

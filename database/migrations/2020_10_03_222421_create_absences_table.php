@@ -14,11 +14,10 @@ class CreateAbsencesTable extends Migration
     public function up()
     {
         Schema::create('absences', function (Blueprint $table) {
-            $table->bigIncrements('id');
             $table->engine = 'InnoDB';
-            $table->string('status');
+            $table->bigIncrements('id');
+            $table->boolean('etat');
             $table->string('justification',25);
-          
             $table->timestamps();
         });
     }

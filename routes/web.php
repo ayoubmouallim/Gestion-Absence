@@ -20,6 +20,9 @@ Route::get('/', function () {
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::view('/Etudiant','Etudiant.EspaceEtudiant');
+
+Route::view('/Administration','administration.administration');
 
 //--------------  Espace Prof--------------------// 
 Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
@@ -28,13 +31,14 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     Route::get('/create-seance','ProfController@createSeance')->name('create.seance');
     Route::post('/save-seance','ProfController@saveSeance')->name('save.seance');
     Route::get('/list-seance','ProfController@listSeance')->name('list.seance');
+    // Routes : Noter Absence
+    Route::get('/noterabsence/{id}','ProfController@PageNoteAbsence')->name('pageAbsence');
+
+
 });
 
 //--------------  Espace Prof--------------------// 
 
 
 
-Route::view('/Etudiant','Etudiant.EspaceEtudiant');
-
-Route::view('/Administration','administration.administration');
 
