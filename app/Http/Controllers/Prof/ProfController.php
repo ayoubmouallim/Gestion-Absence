@@ -12,6 +12,7 @@ use App\Filiere;
 use App\Matiere;
 use App\Enseignant;
 use App\Seance;
+use App\Absence;
 use Auth;
 
 class ProfController extends Controller
@@ -89,4 +90,57 @@ public function PageNoteAbsence($id){
 
     return view('Enseignant.NoterAbsence',compact('seance','etudiants','filiere'));
 }
+public function saveAbsence(Request $request)
+{
+   
+     // validation
+     $request -> validate([
+         'absence.*.id_etu' => 'required |numeric',
+         'absence.*.etat' => 'required |numeric|in:0,1',
+     ]);
+
+    $absences = $request->absence;
+    $tableAbsence=[];
+  try {
+       foreach ($absences as $absence) {
+        
+          $tableAbsence[]= [
+       
+            'id_sea' => $request->id_sea,
+            'id_etu' => $absence['id_etu'] ,
+            'etat' => $absence['etat'] ,
+            'justification' => $absence['justification'] , 
+        ];
+        
+    }
+     // inserer les absences dans la table absence
+    Absence::insert($tableAbsence);
+    // remplacer la valeur du champ 'active' par '1' pour ne pas re-enregistrer l'absence la deuxieme fois
+    Seance::where('id',$request->id_sea)->update(['active' => 1]);
+
+       return redirect()->route('list.seance')->with(['success' => 'absence est bien ajouter ']);
+  } catch (\Exception $ex) {
+      return $ex;
+    return redirect()->route('list.seance')->with(['error' => 'Erreur!!! ']);
+  }
+ 
 }
+
+// afficher l'historique d'absence 
+public function historiqueAbsence()
+{
+    $id_prof= Enseignant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
+    
+    $seances = Seance::with('seancematiere')->where('id_ens','=',$id_prof)
+    ->where('active',1)
+    ->get();
+    
+    foreach($seances as $key=>$s){
+        $absence[$key] = $s->absences()->get();   
+    }
+
+   return view('Enseignant.historiqueAbsence',compact('seances','absence'));
+}
+
+}
+

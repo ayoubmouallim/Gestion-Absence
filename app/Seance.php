@@ -28,7 +28,7 @@ class Seance extends Model
     }
     public function absences()
     {
-        return $this->hasMany('App\Absence')->withTimestamps();
+        return $this->hasMany('App\Absence','id_sea');
     
     }
 }

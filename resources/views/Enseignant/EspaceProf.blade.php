@@ -29,7 +29,7 @@
             <i class="fa fa-check-square-o" style="font-size:48px;" aria-hidden="true"></i>
            <h4> Enregistrer les absences</h4>
            <p class="lead"> Enregistrer les absences à propos les séances que vous avez créés </p>
-           <a href="#" class="btn btn-primary">Start</a>
+           <a href="{{ route('list.seance')}}" class="btn btn-primary">Start</a>
           </div>
         </div>
            
@@ -39,7 +39,7 @@
             <i class="fa fa-newspaper-o" style="font-size:48px;" aria-hidden="true"></i>
            <h4>Consulter l'historique </h4>
            <p class="lead"> Consulter l'historique des absenses des etudiants dans votre matière</p>
-           <a href="#" class="btn btn-primary">Start</a>
+           <a href="{{ route('historique.absence')}}" class="btn btn-primary">Start</a>
           </div>
         </div>
       </div>

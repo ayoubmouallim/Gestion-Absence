@@ -23,7 +23,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ route('home.prof')}}">Accueil <span class="sr-only">(current)</span></a>
               </li>   
 
                <li class="nav-item dropdown">
@@ -32,8 +32,8 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{ route('create.seance')}}">Créer une séance </a>
-                  <a class="dropdown-item" href="#">Enregistrer absence</a>
-                  <a class="dropdown-item" href="#">Consulter l'historique </a>
+                  <a class="dropdown-item" href="{{ route('list.seance')}}">Enregistrer absence</a>
+                  <a class="dropdown-item" href="{{ route('historique.absence')}} ">Consulter l'historique </a>
                   </div>
               </li>
           </ul>

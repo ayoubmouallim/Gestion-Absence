@@ -13,6 +13,9 @@
       @if (Session::has('success'))
       <div class="alert alert-success"> {{ Session::get('success') }} </div>
       @endif
+      @if (Session::has('error'))
+      <div class="alert alert-danger"> {{ Session::get('error') }} </div>
+      @endif
  
       <table class="table table-hover table-striped">
         <thead>
@@ -37,7 +40,10 @@
                <td>{{ $seance-> heure_debut }}</td>
                <td>{{ $seance-> heure_fin }}</td>
                <td>{{ $seance-> type }}</td>
-               <td><a href="{{ route('pageAbsence',$seance->id)}}">  <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit">Noter Absences  <i class="fa fa-edit"></i></button></a></td>
+               <td><a href="{{ route('pageAbsence',$seance->id)}}">  
+               <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled
+                   
+               @endif>Noter Absences  <i class="fa fa-edit"></i></button></a></td>
               </tr>
               
             @endforeach 

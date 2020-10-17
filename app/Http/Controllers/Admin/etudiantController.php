@@ -34,7 +34,8 @@ class etudiantController extends Controller
         $request->validate([
             'nom' => 'required', 
             'cne'=> 'required ',
-            'prenom'=>'required'
+            'prenom'=>'required',
+            'phone'=>'required|max:10',
             ]);         
         // enregistrer les données dans la base de données 
         try {
@@ -53,6 +54,7 @@ class etudiantController extends Controller
                 
             } catch (\Exception $ex) {
                 //afficher un message d'erreur  si  les données des etudiants ne sont pas bein enregistrées 
+              return $ex;
                 return redirect()->route('add.student')->with(['error' => 'Erreur!!! ']);
         }
     }

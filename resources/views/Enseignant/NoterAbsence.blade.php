@@ -6,8 +6,13 @@
   
 <section class="features text-center">
    <div class="container">
-   <div class="row">
+  
+    @error('absence.*.etat')
+   <div class="alert alert-danger">{{ $message }}</div>
+    @enderror
 
+     <form action=" {{ route('save.absence') }} " method="post">
+       @csrf
 <table class="table table-striped table">
         <thead class="bg-primary">
           <tr>
@@ -19,33 +24,41 @@
         </thead>
         <tbody>
           @isset($etudiants)
-            @foreach ($etudiants as $e)
-                 
+            @foreach ($etudiants as $key => $e)
              <tr>
+               <input type="hidden" name="absence[{{$key}}][id_etu]" value="{{$e->id}}">
                <td>{{ $e->nom_etu }}</td>
                <td>{{ $e->prenom_etu }}</td>
                <td class="md-lg">
-               <div class="form-check form-check-inline">
-  <input type="checkbox" class="form-check-input" name="present" value="">
-</div>
+                <div class="radio form-check-inline">
+                      <input type="radio" class="form-check-input" name="absence[{{$key}}][etat]" value="0" checked >
+                </div>
+                <div class="radio form-check-inline">
+                      <input type="radio" class="form-check-input" name="absence[{{$key}}][etat]" value="1"  >
+                </div>
 
-<div class="form-check form-check-inline">
-    <input type="checkbox" class="form-check-input" name="absent" value="">
-</div>
-</td>
-               <td><select class="browser-default custom-select custom-select mb-3">
-  <option selected>Non Justifie</option>
-  <option >Justifie</option>
-  
-</select></td>
+               
+              </td>
+               <td>
+                <div class="form-group">
+                  <select class="form-control" name="absence[{{$key}}][justification]">
+                    <option value="Non Justifie" selected>Non Justifie</option>
+                    <option value="Justifie">Justifie</option>
+                  </select>
+                </div>  
+                </td>
               </tr>
 
             @endforeach 
           @endisset
+          <input type="hidden" name="id_sea" value=" {{ $seance->id }} ">
         </tbody>
       </table>
-
+      <input type="submit" class="btn btn-primary btn-lg" value="submit">
+    </form>
+     
    </div>
+   
 
 
 
