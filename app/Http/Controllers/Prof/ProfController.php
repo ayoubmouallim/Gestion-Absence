@@ -139,6 +139,7 @@ public function historiqueAbsence()
         $absence[$key] = $s->absences()->get();   
     }
 
+     
    return view('Enseignant.historiqueAbsence',compact('seances','absence'));
 }
 

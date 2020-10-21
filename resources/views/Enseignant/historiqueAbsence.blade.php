@@ -44,7 +44,6 @@
 <td>{{ $a->seanceabs->seancematiere['nom_mat'] }}</td>
 <td>{{ $a->seanceabs->seancematiere->filieremat['nom_filiere'] }}</td>
 <td>{{ $a->seanceabs->seancematiere->semestre['nom_sem'] }}</td>
-
 </tr>
 
           @endforeach
