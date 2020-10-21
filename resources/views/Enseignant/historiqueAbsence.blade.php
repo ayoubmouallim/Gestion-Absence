@@ -51,20 +51,9 @@
           @endisset
         </tbody>
       </table>
-<br><br>
+
       
     </div>
   </section>
-    <br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br> 
-   {{  $seances }}
-
-
-   </div>
-   
-
-
-
- </section> 
 
 @endsection
