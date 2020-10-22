@@ -131,6 +131,7 @@ public function historiqueAbsence()
 {
     $id_prof= Enseignant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
     
+    $matieres = Matiere::where('id_ens','=',$id_prof)->get();
     $seances = Seance::with('seancematiere')->where('id_ens','=',$id_prof)
     ->where('active',1)
     ->get();
@@ -140,7 +141,7 @@ public function historiqueAbsence()
     }
 
      
-   return view('Enseignant.historiqueAbsence',compact('seances','absence'));
+   return view('Enseignant.historiqueAbsence',compact('seances','absence','matieres'));
 }
 
 }
