@@ -41,7 +41,3 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
 });
 
 //--------------  Espace Prof--------------------// 
-
-
-
-
