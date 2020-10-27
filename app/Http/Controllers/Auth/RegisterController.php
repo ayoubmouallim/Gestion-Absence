@@ -4,10 +4,13 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+
+use Illuminate\Http\Request;
+use App\User;
+use App\Etudiant;
 
 class RegisterController extends Controller
 {
@@ -71,4 +74,60 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+  //  redirection vers cne page 
+    public function cnePage()
+    {
+        return view('auth.cnePage');
+    }
+
+
+    //  redirection vers register page si cne est valide 
+
+    public function showRegistrationForm(Request $request)
+    {
+      //  return $request;
+       // validation cne 
+       $cne=$request ->cne;
+       $etudiant =Etudiant::where('cne',$cne)->get();
+
+      if(!$etudiant->all())
+       {
+         return redirect()->route('cne.page')->with(['error' => "tu n'es pas un étudiant de l'ENSET"]);  
+       } 
+        return view('auth.register',compact('cne'));
+    }
+
+
+    public function register2(Request $request)
+    {   
+        // validation request
+        $request -> validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+                'password' => ['required', 'string', 'min:8', 'confirmed'],
+         ]);
+         
+         try {
+
+       $user =new User;
+             
+       $user= User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'id_role' => $request->id_role,
+            'password' => Hash::make($request->password),
+        ]);
+
+        // affecter id de l'utilisateur a l'etudiant
+        Etudiant::where('cne',$request->cne)->update([
+            'id_user' =>$user->id,
+       ]); 
+       return redirect()->route('login')->with(['success' => 'vous êtes enregistré avec succès, connectez-vous pour continuer']);
+    } catch (\Exception $ex) {
+        return redirect()->back()->with(['error' => 'Erreur!!']);
+    }
+       
+    }
+
 }

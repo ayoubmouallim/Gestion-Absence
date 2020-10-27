@@ -24,6 +24,8 @@
                 <option value="BDCC2">BDCC2</option>
             </select>
         </div>
+
+        
         <div class="col-md-4">
             <input type="date" class="form-control" id="dateDropdown">
         </div>
@@ -44,9 +46,9 @@
             <th scope="col">Matiere</th>
             <th scope="col">Filiere</th>
             <th scope="col">Semestre</th>
-
+                              
           </tr>
-
+             
         </thead>
      
   

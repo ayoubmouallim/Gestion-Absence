@@ -17,10 +17,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::view('/Etudiant','Etudiant.EspaceEtudiant');
 
 Route::view('/Administration','administration.administration');
 
@@ -37,7 +35,22 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     
     // historique d'absence
     Route::get('/historique-absence','ProfController@historiqueAbsence')->name('historique.absence');
-
+    
 });
-
 //--------------  Espace Prof--------------------// 
+
+
+//--------------  register Etudiant--------------------// 
+Auth::routes();
+
+Route::get('CNE-Page','Auth\RegisterController@cnePage')->name('cne.page');
+//--------------  fin register Etudiant--------------------// 
+
+//--------------  Route Etudiant--------------------// 
+Route::get('/Etudiant','Etudiant\etudiantController@index');
+
+
+//--------------  Route Etudiant--------------------// 
+
+route::post('register-etudiant', 'Auth\RegisterController@showRegistrationForm')->name('register');
+route::post('save-user', 'Auth\RegisterController@register2')->name('save.user');
