@@ -54,3 +54,8 @@ Route::get('/Etudiant','Etudiant\etudiantController@index');
 
 route::post('register-etudiant', 'Auth\RegisterController@showRegistrationForm')->name('register');
 route::post('save-user', 'Auth\RegisterController@register2')->name('save.user');
+//--------------  Espace Prof--------------------// 
+route::get('listeAbsenceEtu', 'Etudiant\etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
+
+
+//------------------------------------------------->

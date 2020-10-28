@@ -18,7 +18,7 @@
            <i class="fa fa-list-alt" style="font-size:48px;" aria-hidden="true"></i>
            <h4>Voir les absences </h4>
           <p class="lead">visualiser votre liste d'absences et voir nombres des heures de vos  absences </p>
-          <a href="#" class="btn btn-primary">Start</a>
+          <a href="{{ route('listeAbsenceEtu')}}" class="btn btn-primary">Start</a>
          </div>
        </div>
                   <div class=" col-md-4  col-xs-12 ">
