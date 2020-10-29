@@ -47,7 +47,7 @@ Route::get('CNE-Page','Auth\RegisterController@cnePage')->name('cne.page');
 //--------------  fin register Etudiant--------------------// 
 
 //--------------  Route Etudiant--------------------// 
-Route::get('/Etudiant','Etudiant\etudiantController@index');
+Route::get('/Etudiant','Etudiant\etudiantController@index')->name('espaceEtudiant');
 
 
 //--------------  Route Etudiant--------------------// 
@@ -56,6 +56,7 @@ route::post('register-etudiant', 'Auth\RegisterController@showRegistrationForm')
 route::post('save-user', 'Auth\RegisterController@register2')->name('save.user');
 //--------------  Espace Prof--------------------// 
 route::get('listeAbsenceEtu', 'Etudiant\etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
+route::get('profil', 'Etudiant\etudiantController@GetDataProfil')->name('profil');
 
 
 //------------------------------------------------->

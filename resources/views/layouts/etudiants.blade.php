@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('etudiants/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('etudiants/profil/style.css')}}">
     <title>prof</title>
   </head>
   <body>
@@ -30,8 +31,8 @@
                   Servises
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Liste des absences  </a>
-                  <a class="dropdown-item" href="#">Voir le profil</a>
+                  <a class="dropdown-item" href="{{ route('listeAbsenceEtu')}}">Liste des absences  </a>
+                  <a class="dropdown-item" href="{{ route('profil')}}">Voir le profil</a>
                   <a class="dropdown-item" href="#">faire une réclamation </a>
                   </div>
               </li>

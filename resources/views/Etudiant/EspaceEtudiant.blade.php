@@ -26,7 +26,7 @@
            <i class="fa fa-user" style="font-size:48px;" aria-hidden="true"></i>
           <h4> Voir le profil</h4>
           <p class="lead">visualiser les  informations de votre profil </p>
-          <a href="#" class="btn btn-primary">Start</a>
+          <a href="{{ route('profil')}}" class="btn btn-primary">Start</a>
          </div>
        </div>
          

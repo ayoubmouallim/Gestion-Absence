@@ -31,5 +31,10 @@ class etudiantController extends Controller
             'matieres' => $matieres
         ]);
     }
+    public function     GetDataProfil(){
+        $id_etu=Etudiant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
+        $etudiant=Etudiant::find($id_etu);
+        return view("Etudiant.profil",['e'=>$etudiant]);
+    }
 
 }
