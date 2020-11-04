@@ -2,19 +2,36 @@
 @section('content')
 
 <section class="profile">
+   
     <div class="container emp-profile">
-                <form method="post">
-                <div class="row">
+        <div class="container ">
+            <div class="col-md-12 ">
+                @if (session()->has('success'))
+                <div class="alert alert-success text-center" style="background: rgb(17, 138, 17);color:white">
+                  {{session()->get('success')}}    
+                </div>    
+                @endif
+            </div>
+                <form method="post" action="{{ route('updatePhoto')}}" enctype="multipart/form-data">
+                    <input type="hidden" name="_method" value="PUT">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                        {{csrf_field()}} 
+                    <div class="row">
                     <div class="col-md-4 set">
                         <div class="profile-img">
-                        <img src="{{asset('etudiants/profil/student.png')}}" alt=""/>
+                        @if ($e->photo)
+                        <img src="{{asset('storage/'.$e->photo)}}" alt="Profil image">
+                        @else
+                        <img src="{{asset('etudiants/profil/student.png')}}" alt="Profil image">
+                        @endif
+                                                      
                                 <div class="file btn btn-lg btn-primary">
-                                    Change Photo
-                                    <input type="file" name="file"/>
+                                    Edit profil
+                                    <input type="file" name="photo" >
                                 </div>
                             </div>
                             <div class="profile-work">
-                                <input type="submit" class="btn btn-secondary btn-md btn-block" name="btnAddMore" value="Edit Profile"/>
+                                <input type="submit" class="btn btn-secondary btn-md btn-block"  value="Enregistrer"/>
                                 <a href="{{ route('espaceEtudiant')}}" class="btn btn-primary btn-md btn-block">Retour</a>
                                 
                               </div>

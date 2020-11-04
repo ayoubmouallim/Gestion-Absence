@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Etudiant;
 use App\Etudiant;
 use App\Absence;
@@ -9,6 +8,7 @@ use Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 
 class etudiantController extends Controller
 {
@@ -31,10 +31,24 @@ class etudiantController extends Controller
             'matieres' => $matieres
         ]);
     }
-    public function     GetDataProfil(){
+    public function   GetDataProfil(){
         $id_etu=Etudiant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
         $etudiant=Etudiant::find($id_etu);
         return view("Etudiant.profil",['e'=>$etudiant]);
+    }
+
+
+    public function update(Request $request)
+    {
+        $id_etu=Etudiant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
+        $et=Etudiant::find($id_etu);
+        if ($request->hasFile('photo')){
+            $et->photo=$request->photo->store('images');// recuperer le path de images 
+        }
+          session()->flash('success','la photo est bein ajouter !!');
+          $et->save(); 
+        return redirect('profil'); 
+
     }
 
 }

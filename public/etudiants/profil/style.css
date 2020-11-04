@@ -15,12 +15,15 @@
 }
 .profile-img{
     text-align: center;
-    background: #afb0b1;
+    
 }
 
 .profile-img img{
     width: 70%;
     height: 100%;
+    padding-top: 40px;
+    
+    
 }
 .profile-img .file {
     position: relative;

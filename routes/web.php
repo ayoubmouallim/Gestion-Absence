@@ -57,6 +57,7 @@ route::post('save-user', 'Auth\RegisterController@register2')->name('save.user')
 //--------------  Espace Prof--------------------// 
 route::get('listeAbsenceEtu', 'Etudiant\etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
 route::get('profil', 'Etudiant\etudiantController@GetDataProfil')->name('profil');
-
+Route::get('Etudiant/edit','Etudiant\etudiantController@edit');// pour remplir le formumaire de cv a modifier 
+Route::put('Etudiant/update','Etudiant\etudiantController@update')->name('updatePhoto');// modifier un cv
 
 //------------------------------------------------->

@@ -31,6 +31,7 @@ class etudiantController extends Controller
     public function saveStudent(Request $request){
     
         // les données nesessaires dans l'ajoute 
+        
         $request->validate([
             'nom' => 'required', 
             'cne'=> 'required ',
@@ -46,7 +47,7 @@ class etudiantController extends Controller
                     'prenom_etu' => $request->prenom,
                     'phone_etu' => $request->phone,
                     'id_filiere' => $request->filiere,
-                    'id_user'=> 4
+                    'id_user'=> 4,
                 ]
                 );
                 //afficher un message de success si  les données des etudiants sont bein enregistrées 

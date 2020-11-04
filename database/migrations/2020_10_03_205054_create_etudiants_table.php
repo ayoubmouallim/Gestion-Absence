@@ -21,6 +21,7 @@ class CreateEtudiantsTable extends Migration
             $table->string('nom_etu');
             $table->string('prenom_etu');
             $table->integer('phone_etu');
+            $table->string('photo')->nullable();
             $table->timestamps();
 
            
