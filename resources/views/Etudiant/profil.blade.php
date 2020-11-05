@@ -15,12 +15,12 @@
                 <form method="post" action="{{ route('updatePhoto')}}" enctype="multipart/form-data">
                     <input type="hidden" name="_method" value="PUT">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                        {{csrf_field()}} 
+                        
                     <div class="row">
                     <div class="col-md-4 set">
                         <div class="profile-img">
                         @if ($e->photo)
-                        <img src="{{asset('storage/'.$e->photo)}}" alt="Profil image">
+                        <img src="{{asset($e->photo)}}" alt="Profil image">
                         @else
                         <img src="{{asset('etudiants/profil/student.png')}}" alt="Profil image">
                         @endif

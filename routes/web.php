@@ -42,22 +42,21 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
 
 //--------------  register Etudiant--------------------// 
 Auth::routes();
-
 Route::get('CNE-Page','Auth\RegisterController@cnePage')->name('cne.page');
+route::post('register-etudiant', 'Auth\RegisterController@showRegistrationForm')->name('register');
+route::post('save-user', 'Auth\RegisterController@register2')->name('save.user');
 //--------------  fin register Etudiant--------------------// 
 
 //--------------  Route Etudiant--------------------// 
-Route::get('/Etudiant','Etudiant\etudiantController@index')->name('espaceEtudiant');
+ 
+Route::group(['prefix' => 'Etudiant','namespace' => 'Etudiant'], function () {
+    
+    Route::get('/','etudiantController@index')->name('espaceEtudiant');
+        //absence
+    route::get('listeAbsenceEtu','etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
+        //profil
+    route::get('profil', 'etudiantController@GetDataProfil')->name('profil');
+    Route::put('update','etudiantController@update')->name('updatePhoto');// modifier un cv
+});
 
-
-//--------------  Route Etudiant--------------------// 
-
-route::post('register-etudiant', 'Auth\RegisterController@showRegistrationForm')->name('register');
-route::post('save-user', 'Auth\RegisterController@register2')->name('save.user');
-//--------------  Espace Prof--------------------// 
-route::get('listeAbsenceEtu', 'Etudiant\etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
-route::get('profil', 'Etudiant\etudiantController@GetDataProfil')->name('profil');
-Route::get('Etudiant/edit','Etudiant\etudiantController@edit');// pour remplir le formumaire de cv a modifier 
-Route::put('Etudiant/update','Etudiant\etudiantController@update')->name('updatePhoto');// modifier un cv
-
-//------------------------------------------------->
+//-----------------*********------------------------//

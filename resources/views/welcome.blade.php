@@ -73,7 +73,7 @@
                         <a href="{{ route('login') }}">Login</a>
 
                         @if (Route::has('register'))
-                            <a href="#">Register</a>
+                            <a href="{{route('cne.page')}}">Register</a>
                         @endif
                     @endauth
                 </div>

@@ -45,7 +45,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{route('cne.page')}}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
