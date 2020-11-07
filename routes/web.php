@@ -52,11 +52,9 @@ route::post('save-user', 'Auth\RegisterController@register2')->name('save.user')
 Route::group(['prefix' => 'Etudiant','namespace' => 'Etudiant'], function () {
     
     Route::get('/','etudiantController@index')->name('espaceEtudiant');
-        //absence
     route::get('listeAbsenceEtu','etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
-        //profil
     route::get('profil', 'etudiantController@GetDataProfil')->name('profil');
-    Route::put('update','etudiantController@update')->name('updatePhoto');// modifier un cv
+    Route::put('update','etudiantController@update')->name('updatePhoto');
 });
 
 //-----------------*********------------------------//
