@@ -17,7 +17,7 @@
            <i class="fa fa-list-alt" style="font-size:48px;" aria-hidden="true"></i>
            <h4>Liste des étudiants </h4>
           <p class="lead">Visualiser la liste des etudiants  dans tous les filières </p>
-          <a href="#" class="btn btn-primary">Start</a>
+          <a href="{{route('adminiabs') }}" class="btn btn-primary">Start</a>
          </div>
        </div>
                   <div class=" col-md-4  col-xs-12 ">

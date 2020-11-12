@@ -20,7 +20,6 @@ Route::get('/', function () {
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::view('/Administration','administration.administration');
 
 //--------------  Espace Prof--------------------// 
 Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
@@ -60,3 +59,13 @@ Route::group(['prefix' => 'Etudiant','namespace' => 'Etudiant'], function () {
 });
 
 //-----------------*********------------------------//
+
+
+//--------------  Route Administration--------------------// 
+
+Route::view('/Administration','administration.administration');
+
+Route::group(['prefix' => 'Administration','namespace' => 'Administration'], function () {
+
+route::get('listeEtudiantAbs', 'administrationController@ListeEtudiantsAbs')->name('adminiabs');
+});

@@ -37,10 +37,19 @@
 
         </ul>
         <ul class="navbar-nav">
-          <li class="nav-item">
-          <a class="btn btn-primary "  href="#"> Déconnecter</a>
-        </li>
-        </ul>
+            <li class="nav-item">
+           
+            <a class=" btn btn-primary" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        Deconnecter 
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                        @csrf
+                                    </form>
+          </li>
+          </ul>
             
         </div>
       </nav>
