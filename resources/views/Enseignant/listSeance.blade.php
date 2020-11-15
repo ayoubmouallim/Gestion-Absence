@@ -42,8 +42,10 @@
                <td>{{ $seance-> type }}</td>
                <td><a href="{{ route('pageAbsence',$seance->id)}}">  
                <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled
-                   
-               @endif>Noter Absences  <i class="fa fa-edit"></i></button></a></td>
+               @endif>Noter Absences  <i class="fa fa-edit"></i></button></a>
+               <a href="{{ route('edit.seance',$seance->id) }}">  
+                <button class="btn btn-warning btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled 
+                @endif>Edit Séance  <i class="fa fa-edit"></i></button></a></td>
               </tr>
               
             @endforeach 

@@ -34,6 +34,8 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     
     // historique d'absence
     Route::get('/historique-absence','ProfController@historiqueAbsence')->name('historique.absence');
+    Route::get("/edit/{id}",'ProfController@editSeance')->name('edit.seance');
+    Route::put("/update/{id}",'ProfController@updateSeance')->name('update.seance');
     
 });
 //--------------  Espace Prof--------------------// 
