@@ -46,6 +46,9 @@
                <a href="{{ route('edit.seance',$seance->id) }}">  
                 <button class="btn btn-warning btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled 
                 @endif>Edit Séance  <i class="fa fa-edit"></i></button></a></td>
+                <td><a href="{{ route('modifierAbs',$seance->id)}}">  
+               <button class="btn btn-primary btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->date < now()->subWeek() ) disabled 
+                @endif> Modifier Absences  <i class="fa fa-edit"></i></button></a>
               </tr>
               
             @endforeach 

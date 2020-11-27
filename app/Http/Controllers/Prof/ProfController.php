@@ -183,5 +183,23 @@ public function historiqueAbsence()
    return view('Enseignant.historiqueAbsence',compact('seances','absence','matieres'));
 }
 
+
+public function ModifierAbsence($id){
+  
+    //retourner id de la seance a partir du liste des seances
+    $seance = Seance::findOrFail($id);
+    $id_matiere = $seance->id_mat;//la matiere de cette seance
+    //recuperer la filiere a partir du id_matiere
+    $filiere = Matiere::find($id_matiere)->filieremat()->get();
+  foreach($filiere as $f){
+
+    $id_fil = $f->id;
+    $etudiants = Etudiant::where('id_filiere',$id_fil)->get();
+  }
+     $absences = Absence::where('id_sea',$id)->get();
+          
+    return view('Enseignant.ModifierAbsence',compact('seance','etudiants','filiere','absences'));
+}
+
 }
 

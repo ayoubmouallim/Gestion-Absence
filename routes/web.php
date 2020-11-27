@@ -31,6 +31,10 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     // Routes : Noter Absence
     Route::get('/noterabsence/{id}','ProfController@PageNoteAbsence')->name('pageAbsence');
     Route::post('/save-absence','ProfController@saveAbsence')->name('save.absence');
+    //modifier absence
+    Route::get('/modifierabsence/{id}','ProfController@ModifierAbsence')->name('modifierAbs');
+
+    
     
     // historique d'absence
     Route::get('/historique-absence','ProfController@historiqueAbsence')->name('historique.absence');
