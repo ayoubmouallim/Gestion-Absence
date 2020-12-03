@@ -20,7 +20,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{{ route('admini.accueil') }}">Accueil <span class="sr-only">(current)</span></a>
             </li>   
               
               
@@ -29,8 +29,7 @@
                   Servises
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Liste des etudiants  </a>
-                  <a class="dropdown-item" href="#"> Detail des absences des etudiants</a>
+                <a class="dropdown-item" href="{{ route('adminiabs') }}">Liste des etudiants  </a>
                   <a class="dropdown-item" href="#"> Envoyer des avertissemets</a>
                   </div>
               </li>

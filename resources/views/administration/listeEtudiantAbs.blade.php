@@ -6,61 +6,55 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-      <h2>Liste des Etudiants Absences dans Toutes les filieres</h2>
- 
+      <h2>Liste des Etudiants</h2> <br><br>
+  
+      <div class="row">
+        <div class="col-md-4" style=" margin-left:66% ">
+          <input type="text" class="form-control" id="myInput" placeholder="recherche...">
+        </div>   
+    </div>
+    <br>
+
       <div class="row">
 
+        
       <table class="table table-hover table-striped">
   
         <thead class="thead-dark">
           <tr>
+            <th scope="col">CNE</th>
             <th scope="col">Nom Etudiant(e)</th>
             <th scope="col">Prenom Etudiant(e)</th>
-            <th scope="col">etat</th>
-            <th scope="col">Date</th>
-            <th scope="col">Heure Debut</th>
-            <th scope="col">Heure Fin</th>
-            <th scope="col">Type Seance</th>
-            <th scope="col">Matiere</th>
             <th scope="col">Filiere</th>
-            <th scope="col">Semestre</th>
+            <th scope="col">Detail absence</th>
                               
           </tr>
              
         </thead>
      
   
-        <tbody id="download-forms-table-tbody">
-          @isset($absences) 
-          <tr>
-          @foreach($absences as $key=>$abs)
-
-        <td>{{ $abs->etudiantabs['nom_etu']}}</td>
-        <td>{{ $abs->etudiantabs['prenom_etu']}}</td>
-
-           @if($abs->etat == 1)
-           <td>Absent(e)</td>
-           @else
-           <td>Present(e)</td>
-@endif
-        <td>{{ $abs->seanceabs['date'] }}</td>
-        <td>{{ $abs->seanceabs['heure_debut'] }}</td>
-        <td>{{ $abs->seanceabs['heure_fin'] }}</td>
-        <td>{{ $abs->seanceabs['type'] }}</td>
-        <td>{{ $abs->seanceabs->seancematiere['nom_mat'] }}</td>
-        <td>{{ $abs->seanceabs->seancematiere->filieremat['nom_filiere'] }}</td>
-        <td>{{ $abs->seanceabs->seancematiere->semestre['nom_sem'] }}</td>
+        <tbody id="myTable">
+          @isset($etudiants) 
+          @foreach($etudiants as $etudiant)
+          
+        <tr>
+            <td>{{ $etudiant->cne}}</td>
+            <td>{{ $etudiant->nom_etu}}</td>
+            <td>{{ $etudiant->prenom_etu}}</td>
+            <td>{{ $etudiant->filiere['nom_filiere'] }}</td>
+            <td><a href="{{ route('detail.abs',$etudiant->id)}}">  
+              <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit">afficher  <i class="fa fa-edit"></i></button></a></td>
         </tr>
 
           @endforeach
-          
-          @endisset
+                     
+          @endisset   
         </tbody>
       </table>
       <div class="clearfix  justify-content-end">
-				<div class="hint-text">Voir  <b>6</b>&nbsp Etudiants Absences par Page</div>
+				<div class="hint-text">Voir  <b>6</b>&nbsp; Etudiants Absences par Page</div>
 				<ul class="pagination">
-					<li class="page-item " >{{ $absences->links() }}</li>
+        <li class="page-item " >{{ $etudiants->links() }}</li>
 				</ul>
 			</div>
             </div>
@@ -69,6 +63,20 @@
 
   </section>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
 
+$(document).ready(function(){
+  $("#myInput").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myTable tr").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+
+   
+</script>
 
 @stop
+

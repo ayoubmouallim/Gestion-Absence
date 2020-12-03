@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 use App\User;
 use App\Etudiant;
+use App\Record;
+use App\Matiere;
 
 class RegisterController extends Controller
 {
@@ -123,9 +125,31 @@ class RegisterController extends Controller
         Etudiant::where('cne',$request->cne)->update([
             'id_user' =>$user->id,
        ]); 
+
+
+              //-------------   to initialize record table  ----------------//
+              $etudiant = Etudiant::select('id','id_filiere')->where('cne',$request->cne)->get();
+              $id_etu = $etudiant[0]->id;
+              $id_filiere = $etudiant[0]->id_filiere;
+              $matieres=Matiere::select('id')->where('id_filiere',$id_filiere)->get();
+              $tableARecords=[];
+              foreach ($matieres as $matiere) {
+              
+              $tableARecords[]=[
+               'id_etu' => $id_etu,
+               'id_mat' => $matiere->id,
+               'nombre_Heure' => 0,
+              ];
+           }
+           
+                Record::insert($tableARecords);
+              
+              //------------------------------------------------------------//
+
        return redirect()->route('login')->with(['success' => 'vous êtes enregistré avec succès, connectez-vous pour continuer']);
     } catch (\Exception $ex) {
-        return redirect()->back()->with(['error' => 'Erreur!!']);
+        return $ex;
+        return redirect()->route('cne.page')->with(['error' => 'Erreur!!']);
     }
        
     }

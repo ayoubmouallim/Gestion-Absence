@@ -13,6 +13,7 @@ use App\Matiere;
 use App\Enseignant;
 use App\Seance;
 use App\Absence;
+use App\Record;
 use Auth;
 
 class ProfController extends Controller
@@ -152,6 +153,18 @@ public function saveAbsence(Request $request)
         ];
         
     }
+
+   //---------------  update record   ----------------//
+     
+   $id_mat=Seance::select('id_mat')->where('id',$request->id_sea)->get()[0]->id_mat;
+   foreach ($absences as $absence) {
+       if($absence['etat'] == 1){
+       Record::where('id_mat',$id_mat)->where('id_etu',$absence['id_etu'])->increment('nombre_Heure',2);
+         }
+    }
+  //------------------------------------------------//   
+
+
      // inserer les absences dans la table absence
     Absence::insert($tableAbsence);
     // remplacer la valeur du champ 'active' par '1' pour ne pas re-enregistrer l'absence la deuxieme fois

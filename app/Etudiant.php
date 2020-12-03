@@ -26,4 +26,10 @@ class Etudiant extends Model
         return $this->hasMany('App\Absence')->withTimestamps();
     
     }
+
+    public function recordEtudiant()
+    {
+        return $this->hasMany('App\Record')->withTimestamps();
+    
+    }
 }

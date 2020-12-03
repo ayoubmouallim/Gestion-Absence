@@ -37,4 +37,10 @@ protected $hidden = [
     
     }
 
+    public function recordmatiere()
+    {
+        return $this->hasMany('App\Record')->withTimestamps();
+    
+    }
+
 }

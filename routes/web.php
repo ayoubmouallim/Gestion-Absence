@@ -69,9 +69,10 @@ Route::group(['prefix' => 'Etudiant','namespace' => 'Etudiant'], function () {
 
 //--------------  Route Administration--------------------// 
 
-Route::view('/Administration','administration.administration');
+Route::view('/Administration','administration.administration')->name('admini.accueil');
 
 Route::group(['prefix' => 'Administration','namespace' => 'Administration'], function () {
 
 route::get('listeEtudiantAbs', 'administrationController@ListeEtudiantsAbs')->name('adminiabs');
+route::get('detail-absence/{id}', 'administrationController@detailAbsence')->name('detail.abs');
 });

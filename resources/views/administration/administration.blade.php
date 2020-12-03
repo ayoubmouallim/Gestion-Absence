@@ -12,24 +12,17 @@
    <div class="container">
      <h1>Servises</h1>
      <div class="row"><!-- featues1 -->
-       <div class=" col-md-4  col-xs-12 ">
+       <div class=" col-md-6  col-xs-12 ">
          <div class="feat"> <!--my div -->
            <i class="fa fa-list-alt" style="font-size:48px;" aria-hidden="true"></i>
            <h4>Liste des étudiants </h4>
-          <p class="lead">Visualiser la liste des etudiants  dans tous les filières </p>
+          <p class="lead">Visualiser la liste des etudiants  dans tous les filières et leur détail d'absence </p>
           <a href="{{route('adminiabs') }}" class="btn btn-primary">Start</a>
          </div>
        </div>
-                  <div class=" col-md-4  col-xs-12 ">
-         <div class="feat"> <!--my div -->
-           <i class="fa fa-user" style="font-size:48px;" aria-hidden="true"></i>
-          <h4> Détail des absences des étudiants </h4>
-          <p class="lead">Visualiser le détail des absences de chaque étudiants </p>
-          <a href="#" class="btn btn-primary">Start</a>
-         </div>
-       </div>
+        
          
-       <div class=" col-md-4  col-xs-12 ">
+       <div class=" col-md-6  col-xs-12 ">
          <div class="feat"> <!--my div -->
            <i class="fa fa-pencil"  style="font-size:48px;" aria-hidden="true"></i>
           <h4>Envoyer des avertissemets</h4>
