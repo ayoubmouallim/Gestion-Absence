@@ -30,4 +30,9 @@ class Enseignant extends Model
         return $this->hasMany('App\Seance')->withTimestamps();
     
     }
+    public function prof_reclamation()
+    {
+        return $this->hasMany('App\Reclamation')->withTimestamps();
+    
+    }
 }

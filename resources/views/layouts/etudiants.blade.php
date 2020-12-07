@@ -28,12 +28,12 @@
               
                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Servises
+                  Services
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <a class="dropdown-item" href="{{ route('listeAbsenceEtu')}}">Liste des absences  </a>
                   <a class="dropdown-item" href="{{ route('profil')}}">Voir le profil</a>
-                  <a class="dropdown-item" href="#">faire une réclamation </a>
+                  <a class="dropdown-item" href="{{ route('reclamation')}}">Envoyer des réclamations </a>
                   </div>
               </li>
         </ul>

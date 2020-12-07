@@ -134,15 +134,14 @@ body{
   .footer h3 {
       color: #0895D1;
       font-weight: bold;
-      letter-spacing: 1px;  /*espace entre les ligne */
-      margin: 10px 0 10px ;
+      letter-spacing: 1px;  
   }
   .footer .three-columns{
       overflow: hidden;
   }
   .footer .three-columns li {
       width: 50%;
-      float: left; /*pour faire trois dans caque ligne (important */
+      float: left; 
       padding: 5px 0 ;
       padding-left: 0;
   }
@@ -169,57 +168,4 @@ body{
     font-weight: bold;
   }
 
-/*end section footetr */
 
-/* section  accueill
-.home {
-    min-height: 400px;
-    background-color: #1074cd ;
-}
-
-.home h1{
-   
-    color: white;
-    margin-bottom: 100px;
-    padding-top: 23px;
-    font-weight: bold;
-    font-size: 54px;
-}
-.home .col-md-7{
-    padding: 0;
-}
-.home .col-md-5 {
-    padding: 0;   
-}
-
-.home p{
-    color: white;
-    line-height: 50px;
-    padding-bottom: 26px;
-  
-    color: white;
-    font-size: 26px;
-    line-height: 40px;  
-}
-
-.home a {
-    
-    color: #5e4eb8;
-    text-align: center;
-    background: #fff;
-    padding: 10px;
-    font-size: 1.5rem;
-    border-radius: 50px;
-    width: 200px;
-    margin-top: 10px;
-    transition: 0.15s ease-in-out;
-    position: relative;
-    overflow: hidden;
-  }
-  .home a:hover {
-    background: white;
-    color:blue;
-  } */
-
-  
-/*start footer*/

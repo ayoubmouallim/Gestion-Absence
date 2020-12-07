@@ -26,10 +26,10 @@
               
                <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Servises
+                  Services
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('adminiabs') }}">Liste des etudiants  </a>
+                <a class="dropdown-item" href="{{ route('adminiabs') }}">Liste des étudiants  </a>
                   <a class="dropdown-item" href="#"> Envoyer des avertissemets</a>
                   </div>
               </li>

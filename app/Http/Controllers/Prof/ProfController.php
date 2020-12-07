@@ -14,6 +14,7 @@ use App\Enseignant;
 use App\Seance;
 use App\Absence;
 use App\Record;
+use App\Reclamation;
 use Auth;
 
 class ProfController extends Controller
@@ -212,6 +213,23 @@ public function ModifierAbsence($id){
      $absences = Absence::where('id_sea',$id)->get();
           
     return view('Enseignant.ModifierAbsence',compact('seance','etudiants','filiere','absences'));
+}
+//pour voir les reclamations 
+public function showReclamation()
+{
+   
+     $id_prof= Enseignant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
+    
+     $recs = Reclamation::where('id_prof','=',$id_prof)->get();
+    return view('Enseignant.reclamation',['recs'=>$recs]);
+   
+}
+//supprimer une réclamation 
+public function deleteRec($id)
+{
+        $Rec=Reclamation::find($id);
+       Reclamation::where('id',$id) -> delete();
+       return redirect()->route('show.reclamation')->with(['delete' => 'La réclamation est supprimée avec succès ']); 
 }
 
 }

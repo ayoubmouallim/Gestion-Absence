@@ -3,6 +3,8 @@ namespace App\Http\Controllers\Etudiant;
 use App\Etudiant;
 use App\Absence;
 use App\Matiere;
+use App\Reclamation;
+use App\Enseignant;
 
 use Auth;
 
@@ -53,5 +55,30 @@ class etudiantController extends Controller
         return redirect()->route('profil'); 
 
     }
+
+    public function sendReclamation()
+    {  $profs=Enseignant::all();
+        
+        $id_etu=Etudiant::select('id')->where('id_user','=',auth::user()->id)->get()[0]->id;
+        return view('Etudiant.reclamation',compact('profs','id_etu'));
+    }
+     // enregister la réclamations dans BD 
+    public  function saveReclamation(Request $request){
+
+      $request->validate([
+          'date'=>'required',
+          'message' => 'required',
+      ]) ;
+
+          $rec =new Reclamation;
+          $rec->message=$request->input('message');
+          $rec->date=$request->input("date");
+          $rec->id_prof=$request->input('id_prof');
+          $rec->id_etu=$request->input('id_etu');
+
+        $rec->save();
+        return redirect()->route('reclamation')->with(['success' => 'La réclamation est envoyé avec succès']);
+    
+}
 
 }

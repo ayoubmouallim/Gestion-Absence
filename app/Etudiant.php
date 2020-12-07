@@ -32,4 +32,10 @@ class Etudiant extends Model
         return $this->hasMany('App\Record')->withTimestamps();
     
     }
+
+    public function etu_reclamation()
+    {
+        return $this->hasMany('App\Reclamation')->withTimestamps();
+    
+    }
 }

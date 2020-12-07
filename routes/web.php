@@ -40,6 +40,9 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     Route::get('/historique-absence','ProfController@historiqueAbsence')->name('historique.absence');
     Route::get("/edit/{id}",'ProfController@editSeance')->name('edit.seance');
     Route::put("/update/{id}",'ProfController@updateSeance')->name('update.seance');
+    //reclamations 
+    Route::get('/reclamation','ProfController@showReclamation')->name('show.reclamation');
+    Route::get('delete/{id}','ProfController@deleteRec')->name("delete.rec");
     
 });
 //--------------  Espace Prof--------------------// 
@@ -61,7 +64,10 @@ Route::group(['prefix' => 'Etudiant','namespace' => 'Etudiant'], function () {
     route::get('listeAbsenceEtu','etudiantController@listeAbsenceEtudiant')->name('listeAbsenceEtu');
         //profil
     route::get('profil', 'etudiantController@GetDataProfil')->name('profil');
-    Route::put('update','etudiantController@update')->name('updatePhoto');// modifier un cv
+    Route::put('update','etudiantController@update')->name('updatePhoto');
+    //reclamations 
+    Route::get('/reclamation','etudiantController@sendReclamation')->name('reclamation');
+    Route::post('/save-reclamation','etudiantController@saveReclamation')->name('save.reclamation');
 });
 
 //-----------------*********------------------------//

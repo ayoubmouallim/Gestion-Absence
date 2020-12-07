@@ -2,7 +2,6 @@
 
 use App\Record;
  
-
 function calculerNombreTotalHeure($idStudent)
 {
     $records=Record::where('id_etu',$idStudent)->get();
