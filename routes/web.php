@@ -33,6 +33,7 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     Route::post('/save-absence','ProfController@saveAbsence')->name('save.absence');
     //modifier absence
     Route::get('/modifierabsence/{id}','ProfController@ModifierAbsence')->name('modifierAbs');
+    Route::post('/update-absence','ProfController@updateAbsence')->name('update.absence');
 
     
     

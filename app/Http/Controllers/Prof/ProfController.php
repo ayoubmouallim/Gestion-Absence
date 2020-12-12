@@ -232,5 +232,34 @@ public function deleteRec($id)
        return redirect()->route('show.reclamation')->with(['delete' => 'La réclamation est supprimée avec succès ']); 
 }
 
+public function updateAbsence(Request $request)
+{
+ 
+   $absences=$request->absence;
+
+try {
+      
+   foreach ($absences as $absence) {
+
+       Absence::where('id',$absence['id'])->update(
+        [
+            'etat' => $absence['etat'] ,
+            'justification' => $absence['justification'], 
+            'id_sea' => $request->id_sea,
+            'id_etu' => $absence['id_etu'] ,
+           ]
+       );
+   }
+
+   return redirect()->route('list.seance')->with(['success' => 'L\'absence a été modifiée avec succès']);
+
+} catch (\Exception $ex) {
+
+   
+    return redirect()->route('list.seance')->with(['error' => 'Erreur!!! ']);
+}
+ 
+}
+
 }
 

@@ -11,7 +11,7 @@
    <div class="alert alert-danger">{{ $message }}</div>
     @enderror
 
-     <form action="" method="post">
+     <form action=" {{ route('update.absence') }} " method="post">
        @csrf
 <table class="table table-striped table">
         <thead class="bg-primary">
@@ -51,7 +51,7 @@
                 </div>  
                 </td>
               </tr>
-
+              <input type="hidden" name="absence[{{$key}}][id]" value=" {{ $abs->id }} ">
             @endforeach 
 
           @endisset
