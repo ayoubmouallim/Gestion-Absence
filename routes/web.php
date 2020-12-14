@@ -83,3 +83,7 @@ Route::group(['prefix' => 'Administration','namespace' => 'Administration'], fun
 route::get('listeEtudiantAbs', 'administrationController@ListeEtudiantsAbs')->name('adminiabs');
 route::get('detail-absence/{id}', 'administrationController@detailAbsence')->name('detail.abs');
 });
+// send email 
+Route::get('/sendemail', 'SendEmailController@index')->name('sendEmail');
+Route::post('/sendemail/send', 'SendEmailController@send')->name('send');
+//--------------  Route Administration--------------------// 

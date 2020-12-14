@@ -27,7 +27,7 @@
            <i class="fa fa-pencil"  style="font-size:48px;" aria-hidden="true"></i>
           <h4>Envoyer des avertissemets</h4>
           <p class="lead"> Envoyer des avertissements aux étudiants qui ont beaucoup des absences</p>
-          <a href="#" class="btn btn-primary">Start</a>
+          <a href="{{route('sendEmail')}}" class="btn btn-primary">Start</a>
          </div>
        </div>
      </div>
