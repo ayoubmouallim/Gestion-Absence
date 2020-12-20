@@ -90,7 +90,7 @@ button.btn {
    </div>
    @endif
                 <div class="form-bg">
-                <h3 align="center">Envoyer un avertissement d'absence auz Etudiants</h3><br />
+                <h3 align="center">Envoyer un avertissement d'absence aux Etudiants</h3><br />
 
                     <form class="form" method="post"  action="{{ route('send')}}">
                     @csrf
@@ -104,7 +104,5 @@ button.btn {
         </div>
     </div>
 </div>
-
-
 @stop
 

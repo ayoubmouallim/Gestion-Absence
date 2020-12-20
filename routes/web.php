@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
+
+Route::get('/', function () {
+    return view('accueil');
+});
 Route::get('/home', 'HomeController@index')->name('home');
 
 
@@ -35,8 +36,6 @@ Route::group(['prefix' => 'Prof' , 'namespace' => 'Prof'], function () {
     Route::get('/modifierabsence/{id}','ProfController@ModifierAbsence')->name('modifierAbs');
     Route::post('/update-absence','ProfController@updateAbsence')->name('update.absence');
 
-    
-    
     // historique d'absence
     Route::get('/historique-absence','ProfController@historiqueAbsence')->name('historique.absence');
     Route::get("/edit/{id}",'ProfController@editSeance')->name('edit.seance');
