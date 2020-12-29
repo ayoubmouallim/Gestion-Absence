@@ -36,7 +36,7 @@ class etudiantController extends Controller
             'nom' => 'required', 
             'cne'=> 'required ',
             'prenom'=>'required',
-            'phone'=>'required|max:10',
+            'phone'=>'required',
             ]);         
         // enregistrer les données dans la base de données 
         try {

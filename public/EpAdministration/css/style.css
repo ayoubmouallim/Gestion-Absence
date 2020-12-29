@@ -114,21 +114,18 @@ body{
 }
 
 /* start section footer  */
-
-
 .footer{
-    background: rgba(1, 1, 1,0.87);
-    color: white;
-    padding-top: 10px;
-    
+    background: #35383c;
+    color: rgb(216, 212, 212);
+    padding-top: 10px; 
   }
   .footer .three-columns a{
-      color:white;
       font-size: 16px;
       text-decoration: none;
+      color: rgb(216, 212, 212);
   }
-  .footer .three-columns a :hover{
-      color: blue ;
+  .footer .three-columns :hover a{
+      color:white;
       font-weight: bold ;    
   }
   .footer h3 {
@@ -150,16 +147,25 @@ body{
       overflow: hidden;
      margin-top: 16px;
      margin-bottom: 10px;
-     margin-left: 80px;
+     margin-left: 172px;
     
   }
   .footer .sosial li {
       float: left;
       margin-right: 13px;
+      color: rgb(216, 212, 212);
      
   }
+  .footer .sosial li i {
+   
+    color: rgb(216, 212, 212);
+   
+}
+  .footer .sosial li i:hover {
+    color: white;
+}
   .footer .copyright{
-      background: #333;
+      background:  #292c2f;
       padding: 15px 0px;
       margin-top: 20px;
       font-size: 18px;
@@ -168,5 +174,4 @@ body{
     color: #0895D1;
     font-weight: bold;
   }
-
 

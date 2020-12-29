@@ -7,11 +7,8 @@
 
   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <link rel="stylesheet" href="{{asset('p_accueil/css/style.css')}}">
-    
     <title>Accueil</title>
   </head>
   <body>
@@ -27,26 +24,22 @@
               <a class="nav-link" href="{{ route('accueil')}}">Accueil<span class="sr-only">(current)</span></a>
             </li>   
             <li class="nav-item active">
-              <a class="nav-link" href="#servises">Services <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="#equipe">Equipe du projet<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="#contact">Contact <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="{{ route('about')}}">À propos <span class="sr-only">(current)</span></a>
-            </li>
-          
-              
-      
+            
+        
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
           @if (Route::has('login'))
           <div class="top-right links">
               @auth
-                  <a  class="btn btn-primary "  href="{{ url('/home') }}">Home</a>
+                  <a   href="{{ url('/home') }}">Home</a>
               @else
-                  <a class="btn btn-primary " href="{{ route('login') }}">Se connecter</a>
+                  <a  class="btn btn-primary "  href="{{ route('login') }}">Se connecter</a>
 
                   @if (Route::has('register'))
                       <a class="btn btn-primary "  href="{{route('cne.page')}}">S'inscrire</a>
@@ -61,7 +54,65 @@
         </div>
       </nav>
 
-@yield('content')
+    </section>
+
+
+    <section class="about text-center">
+    <div class="container">
+    <h1 class="visible-xs"><span> gestion d'absence</span></h1>
+    <p class="lead "> <strong>Gestion des absences</strong>  est une application web permet de gérer les absences des étudiants d'une manière efficace ,rapide et sécurise ,destinés aux étudiants ,les enseignants et l'administration . </p>
+
+</div>
+    </section>
+    
+    
+    <section class="our-team text-center" id="equipe">
+       
+    <div class="team">
+    <div class="container">
+     <h1>Equipe de projet </h1>
+     <div class="row">
+       <div class="col-lg-4  col-xs-12" data-aos="fade-right" data-aos-duration="1000" >
+         <div class="person"> 
+           <img  class="img-circle" src="{{asset('p_accueil/images/yassine.png')}}" alt="pers1">
+            <h3> Yassine Mabrouk </h3>
+            <p>Elève ingénieur à ENSET Mohammedia</p>
+             <a href="https://www.linkedin.com/in/yassine-mabrouk-9577951b3/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+              <a href="https://github.com/yassine-mabrouk"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+             <a href="https://www.facebook.com/yassine.mabrouk.90226/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
+           
+    
+         </div>
+        </div>
+        <div class="col-lg-4  col-xs-12" data-aos="fade-up" data-aos-duration="2000" >
+         <div class="person"> 
+           <img  class="img-circle" src="{{asset('p_accueil/images/ayoub.jpeg')}}" alt="pers1">
+           <h3>Ayoub Mouallim </h3>
+           <p>Elève ingénieur à ENSET Mohammedia</p>
+           <a href="https://www.linkedin.com/in/ayoub-mouallim-a73180b3/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+           <a href="https://github.com/ayoubmouallim"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+           <a href="https://www.facebook.com/profile.php?id=100027638859348"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
+           
+    
+         </div>
+        </div>
+    
+        <div class="col-lg-4  col-xs-12" data-aos="fade-left" data-aos-duration="1000">
+         <div class="person"> 
+           <img  class="img-circle" src="{{asset('p_accueil/images/ava.png')}}" alt="pers1">
+           <h3> Amine Maslah</h3>
+          <p>Elève ingénieur à ENSET Mohammedia</p>
+           <a href="https://www.linkedin.com/in/amine-maslah-239b1917a/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+          <a href="https://github.com/a-maslah"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+           <a href="https://www.facebook.com/amine.maslah.10"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
+           
+         </div>
+        </div>
+     </div>
+    
+    </div>
+    </div>
+    </section>
 
   <section class="footer text-center" id="contact">
     <div class="container">
@@ -69,14 +120,12 @@
         <div class="col-md-6  ">
                 <h3>SiteMap</h3>
                 <ul class="list-unstyled  three-columns">
-                  <li><a href="#">Accueil</a></li>
-                  <li><a href="#servises">Services</a></li>
+                  <li><a href="{{ route('accueil')}}">Accueil</a></li>
+                  <li><a href="#equipe">Equipe du projet</a></li>
                   <li><a href="#contact">Contact</a></li>
-                  <li><a href="{{ route('about')}}">À propos</a></li>
                 </ul>
                 <ul class='list-unstyled sosial'>
                   <li> <a href="https://www.enset-media.ac.ma/"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a> </li>
-                
                   <li> <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></li>
                   <li> <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></li>
                  </ul>

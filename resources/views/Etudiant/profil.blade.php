@@ -39,7 +39,7 @@
                     <div class="col-md-8 net ">
                         <div class="profile-head">
                                     <h2 class="text-center">
-                                        Kshiti Ghelani
+                                        {{$e->prenom_etu}} {{$e->nom_etu}} 
                                     </h2>
                                 <p class="lead">Etudiant à l'ecole normale supérieure de l'enseignement technique de l'université Hassan II de Casablanca (UH2C)
                                 </p>  

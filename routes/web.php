@@ -17,7 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('accueil');
-});
+})->name('accueil');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 

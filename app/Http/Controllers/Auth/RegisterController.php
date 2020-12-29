@@ -57,7 +57,7 @@ class RegisterController extends Controller
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'password' => ['required', 'string', 'min:6', 'confirmed'],
         ]);
     }
 
@@ -95,7 +95,7 @@ class RegisterController extends Controller
 
       if(!$etudiant->all())
        {
-         return redirect()->route('cne.page')->with(['error' => "tu n'es pas un étudiant de l'ENSET"]);  
+         return redirect()->route('cne.page')->with(['error' => "Tu n'es pas un étudiant de l'ENSET"]);  
        } 
         return view('auth.register',compact('cne'));
     }
@@ -107,7 +107,7 @@ class RegisterController extends Controller
         $request -> validate([
                 'name' => ['required', 'string', 'max:255'],
                 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-                'password' => ['required', 'string', 'min:8', 'confirmed'],
+                'password' => ['required', 'string', 'min:6', 'confirmed'],
          ]);
          
          try {
@@ -146,7 +146,7 @@ class RegisterController extends Controller
               
               //------------------------------------------------------------//
 
-       return redirect()->route('login')->with(['success' => 'vous êtes enregistré avec succès, connectez-vous pour continuer']);
+       return redirect()->route('login')->with(['success' => 'Vous êtes enregistré avec succès, connectez-vous pour continuer']);
     } catch (\Exception $ex) {
         return $ex;
         return redirect()->route('cne.page')->with(['error' => 'Erreur!!']);

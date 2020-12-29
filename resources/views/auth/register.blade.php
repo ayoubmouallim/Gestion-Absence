@@ -1,83 +1,140 @@
-@extends('layouts.app')
+@extends('layouts.accueil')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                @if (Session::has('error'))
-                   <span class="alert alert-danger">{{ Session::get('error') }}</span>
-                @endif
-                <div class="card-header">{{ __('Register') }}</div>
+<style>
+    .form_bg{
+   background-image: linear-gradient(128deg, #1074cd, #4939a5);
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('save.user') }}">
-                        @csrf
+min-height: 100vh;
+display: flex;
+align-items: center;
+padding-top: 20px;
+padding-bottom: 20px;
+}
+.form_bg .feat{
+   padding: 10%;
+   margin-top: 30px;
+   margin-bottom: 10%;
+   border-radius: 10px;
+   background: white;
+   padding-top: 40px;
+   padding-bottom: 30px
+}
+.form_bg .form_horizontal{
+   font-family: 'lato',sans-serif;
+   text-align: center;
+}
+.form_bg .form_horizontal .form_icon{
+   color: rgb(102, 97, 97);
+   font-size: 100px;
+   line-height: 85px;
+   margin: 0 0 13px ;
+}
+.form_bg .form_horizontal .title {
+   color: rgb(29, 25, 25);
+   font-size: 23px;
+   font-weight:700;
+   letter-spacing: 1px;
+   text-transform: uppercase;
+   margin: 0 0 35px 0;
+}
+.form_bg .form_horizontal .form-group {
+   margin: 0 0 10px;
+   position: relative;
 
-                        <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+}
 
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+.form_bg .form_horizontal .form-control {
+   color: #555;
+   background-color: #fff;
+   font-size: 13px;
+   letter-spacing: 1px;
+   height: 37px;
+   padding: 2px 15px 2px 35px;
+   border-radius: 50px;
+}
+.form_bg .form_horizontal .form-control ::placeholder{
+color:rgba(0,0, 0, 0.7) ;
+font-size: 14px;
+text-transform: capitalize;
+}
 
-                                @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+.form_bg .form_horizontal .btn{
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+   color: #fff;
+   font-size: 15px;
+   font-weight: 600;
+   letter-spacing: 1px;
+   width: 100%;
+   padding: 10px 20px;
+   margin: 0 0 15px  0;
+   border: none;
+   border-radius: 20px;
+   text-transform: uppercase;
+}
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
 
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+   </style>
+ </head>
+ <body>
+ 
+  
+  <section class="form_bg">
+     <div class="container">
+     
+       <div class="row">
+         <div class=" offset-md-3 col-md-6 ">
+            @if (Session::has('error'))
+            <span class="alert alert-danger">{{ Session::get('error') }}</span>
+         @endif
 
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+           <div class="feat">
+            <form class="form_horizontal" method="POST" action="{{ route('save.user') }}">
+                @csrf
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
+             <div class="form_icon">
+               <i class="fa fa-user-circle"></i>
+             </div>
+             <h3 class="title">Enregister</h3>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                            </div>
-                        </div>
-
-                        <input type="hidden" name="cne" value= "{{$cne}}">
-                        <input type="hidden" name="id_role" value="4">
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+             <div class="form-group">
+                <input placeholder="Username" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
             </div>
-        </div>
-    </div>
-</div>
+
+             <div class="form-group">
+                <input placeholder="Email" id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
+                @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+             <div class="form-group">
+                <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+
+                @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+             <div class="form-group">
+                <input  placeholder="password-confirm" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">           
+            </div>
+            <input type="hidden" name="cne" value= "{{$cne}}">
+            <input type="hidden" name="id_role" value="4">
+            <button class="btn btn-primary  ">Enregister</button>
+            
+           </form>
+         </div>
+       </div>
+     </div>
+     </div>
+  </section>
 @endsection

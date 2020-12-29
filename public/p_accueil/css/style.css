@@ -199,32 +199,45 @@ body{
 .our-team .team .person {
     margin: 20px;
 }
-  
-
-
-
-
-
-
-.footer{
-    background: rgba(1, 1, 1,0.6);
+.our-team .team .person i {
+    margin:6px;
+    color: rgb(207, 204, 204);
+    -webkit-transition-duration:0.7s ;
+    -moz-transition-duration:0.7s;
+    -o-transition-duration:0.7s;
+     transition-duration:0.7
+}
+.our-team .team .person i:hover {
+    margin:6px;
     color: white;
-    padding-top: 10px;
-    
+    -webkit-transform:scale(1.2,1.2);
+    -o-transform:scale(1.2,1.2);
+    -moz-transform:scale(1.2,1.2) ;
+      transform:scale(1.2,1.2) ;
+}
+
+
+
+
+/*statt footer */
+.footer{
+    background: #35383c;
+    color: rgb(216, 212, 212);
+    padding-top: 10px; 
   }
   .footer .three-columns a{
-      color:white;
       font-size: 16px;
       text-decoration: none;
+      color: rgb(216, 212, 212);
   }
-  .footer .three-columns a :hover{
-      color: blue ;
+  .footer .three-columns :hover a{
+      color:white;
       font-weight: bold ;    
   }
   .footer h3 {
       color: #0895D1;
       font-weight: bold;
-      letter-spacing: 1px;  /*espace entre les ligne */
+      letter-spacing: 1px;  
       margin: 10px 0 10px ;
   }
   .footer .three-columns{
@@ -232,7 +245,7 @@ body{
   }
   .footer .three-columns li {
       width: 50%;
-      float: left; /*pour faire trois dans caque ligne (important */
+      float: left; 
       padding: 5px 0 ;
       padding-left: 0;
   }
@@ -240,16 +253,25 @@ body{
       overflow: hidden;
      margin-top: 16px;
      margin-bottom: 10px;
-     margin-left: 80px;
+     margin-left: 172px;
     
   }
   .footer .sosial li {
       float: left;
       margin-right: 13px;
+      color: rgb(216, 212, 212);
      
   }
+  .footer .sosial li i {
+   
+    color: rgb(216, 212, 212);
+   
+}
+  .footer .sosial li i:hover {
+    color: white;
+}
   .footer .copyright{
-      background: rgb(124, 120, 120);
+      background:  #292c2f;
       padding: 15px 0px;
       margin-top: 20px;
       font-size: 18px;
@@ -258,3 +280,5 @@ body{
     color: #0895D1;
     font-weight: bold;
   }
+
+
