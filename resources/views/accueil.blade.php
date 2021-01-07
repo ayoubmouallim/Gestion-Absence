@@ -6,7 +6,7 @@
 <section class="home text-center">
     
   <div class="container-fluid">
-    <h1 class="text-center"> Gestion  d'absences </h1>
+    <h1 class="text-center"> Gestion  des absences </h1>
  <div class="row">
    <div class="col-md-7">
  <img src=" {{asset('p_accueil/images/man_vector.svg')}}"   class="class="img-fluid"" alt="">
@@ -14,8 +14,9 @@
    </div>
    <div class="col-md-4">
      <p class="lead">
-       la gestion d'absences des etudiants
-      à Ecole Normale Supérieure de l'Enseignement Technique
+
+      Bienvenues à  la gestion des absences des étudiants
+      de école normale supérieure de l'enseignement technique
     </p>
     <a href="{{ route('login') }}" class="btn btn-info">Se connecter </a>
    
@@ -23,12 +24,10 @@
 </div>
 
 </section>
-
-
 <section class="about text-center">
 <div class="container">
-<h1 class="visible-xs"><span> gestion d'absence</span></h1>
-<p class="lead "> <strong>Gestion des absences</strong>  est une application web permet de gérer les absences des étudiants d'une manière efficace ,rapide et sécurise ,destinés aux étudiants ,les enseignants et l'administration . </p>
+<h1 class="visible-xs"><span> Gestion des absences</span></h1>
+<p class="lead "> <strong>Gestion des absences</strong>  est une application web permet de gérer les absences des étudiants  d'une manière efficace ,rapide et sécurisé destinés aux étudiants, enseignants et l'administration de ENSET-M. </p>
 
 </div>
 </section>
@@ -36,7 +35,7 @@
   
    <section class="services text-center " id="servises"> 
     <div class="container">
-      <h1>Servises</h1>
+      <h1>Services</h1>
        <div class="row">
            
           <div class="col-md-4   col-xs-12 " data-aos="fade-right"  data-aos-duration="1500" >

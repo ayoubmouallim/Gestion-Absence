@@ -99,7 +99,7 @@ text-transform: capitalize;
              <h3 class="title">Créer Compte</h3>
 
              <div class="form-group">
-                <input placeholder="Username" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                <input placeholder="Nom utilisateur" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
                 @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
@@ -116,7 +116,7 @@ text-transform: capitalize;
                 @enderror
             </div>
              <div class="form-group">
-                <input placeholder="Password" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
+                <input placeholder="Mot de passe" id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
 
                 @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -125,7 +125,7 @@ text-transform: capitalize;
                 @enderror
             </div>
              <div class="form-group">
-                <input  placeholder="password-confirm" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">           
+                <input  placeholder="confirmer le mot de passe" id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">           
             </div>
             <input type="hidden" name="cne" value= "{{$cne}}">
             <input type="hidden" name="id_role" value="4">

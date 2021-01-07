@@ -59,8 +59,8 @@
 
     <section class="about text-center">
     <div class="container">
-    <h1 class="visible-xs"><span> gestion d'absence</span></h1>
-    <p class="lead "> <strong>Gestion des absences</strong>  est une application web permet de gérer les absences des étudiants d'une manière efficace ,rapide et sécurise ,destinés aux étudiants ,les enseignants et l'administration . </p>
+    <h1 class="visible-xs"><span> Gestion des absences</span></h1>
+    <p class="lead "> <strong>Gestion des absences</strong>  est une application web permet de gérer les absences des étudiants  d'une manière efficace ,rapide et sécurisé destinés aux étudiants, enseignants et l'administration de ENSET-M. </p>
 
 </div>
     </section>
@@ -99,7 +99,7 @@
     
         <div class="col-lg-4  col-xs-12" data-aos="fade-left" data-aos-duration="1000">
          <div class="person"> 
-           <img  class="img-circle" src="{{asset('p_accueil/images/ava.png')}}" alt="pers1">
+           <img  class="img-circle" src="{{asset('p_accueil/images/maslah.jpeg')}}" alt="pers1">
            <h3> Amine Maslah</h3>
           <p>Elève ingénieur à ENSET Mohammedia</p>
            <a href="https://www.linkedin.com/in/amine-maslah-239b1917a/" target="_blank"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>

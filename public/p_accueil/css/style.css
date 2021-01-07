@@ -1,3 +1,4 @@
+
 body{
     padding-top: 70px;
     box-sizing: border-box;
@@ -51,6 +52,8 @@ body{
     padding-top: 23px;
     font-weight: bold;
     font-size: 54px;
+    text-shadow: 3px 3px  rgb(156, 146, 146);
+    font-family: 'Merriweather Sans', sans-serif;
    
 }
 .home .col-md-7{
@@ -181,12 +184,13 @@ body{
 }
 
 .our-team .team img {
-    width: 50%;
+    width: 150px;
+    height: 150px;
     -webkit-transition-duration:0.7s ;
    -moz-transition-duration:0.7s;
    -o-transition-duration:0.7s;
     transition-duration:0.7s;
-    clip-path: circle(); 
+   border-radius: 50%;
 }
 
 .our-team .team img:hover {    
