@@ -9,7 +9,7 @@
         <div class="row mb-2">
           <div class="col-sm-6">
           
-            <h1>Ajouter Enseignant</h1>
+            <h1>Gestion des enseignants</h1>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -21,7 +21,7 @@
        
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Ajouter un Enseignant</h3>
+            <h3 class="card-title">Ajouter un enseignant</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">

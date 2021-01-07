@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Ajouter Matiere</h1>
+            <h1>Gestion des matières</h1>
           </div>
          
         </div>
@@ -21,7 +21,7 @@
        
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Ajouter Matiere</h3>
+            <h3 class="card-title">Ajouter une matière</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse">

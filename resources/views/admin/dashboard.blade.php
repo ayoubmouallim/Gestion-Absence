@@ -6,8 +6,8 @@
     <section class="content-header">
       <div class="container-fluid">
 
-<br><br><br>
-<h1>Espace Admin des statistiques sur :</h1>
+<br>
+
 <br><br>
 <div class="row">
 <div class="col-xl-3 col-md-6 mb-4">

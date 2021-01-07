@@ -75,7 +75,7 @@
                   <li><a href="{{ route('about')}}">À propos</a></li>
                 </ul>
                 <ul class='list-unstyled sosial'>
-                  <li> <a href="https://www.enset-media.ac.ma/"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a> </li>
+                  <li> <a href="https://www.enset-media.ac.ma/" target="_blank"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a> </li>
                 
                   <li> <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></li>
                   <li> <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></li>

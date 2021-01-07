@@ -6,12 +6,12 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-      <h1>Liste des Seances</h1>
+      <h1>Liste des absences</h1>
  
       <div class="row">
         <div class="col-md-4">
             <select class="form-control" id="matiereDropdown">
-                <option value="All">All Matiere</option>
+                <option value="All">tous les matéres</option>
                 @foreach ($matieres as $matiere)
                     <option value="{{ $matiere -> nom_mat }}">{{ $matiere -> nom_mat }}</option>
                 @endforeach
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-4">
             <select class="form-control" id="filiereDropdown">
-                <option value="All">All</option>
+                <option value="All">tous</option>
                 <option value="GLSID2">GLSID2</option>
                 <option value="BDCC2">BDCC2</option>
             </select>
@@ -33,11 +33,12 @@
     </div>
     <br>
 
-      <table class="table table-hover table-striped">
+      <table class="table table-hover table-striped table-responsive-md">
   
         <thead class="thead-dark">
           <tr>
-            <th scope="col">etat</th>
+           
+            <th scope="col">Prenom Etudiant(e)</th>
             <th scope="col">Nom Etudiant(e)</th>
             <th scope="col">Date</th>
             <th scope="col">Heure Debut</th>
@@ -53,16 +54,14 @@
      
   
         <tbody id="download-forms-table-tbody">
+       
           @isset($absence) 
           <tr>
           @foreach($absence as $key=>$abs)
 
           @foreach($abs as $a)
-           @if($a->etat == 1)
-           <td>Absent(e)</td>
-           @else
-           <td>Present(e)</td>
-@endif
+           
+        <td>{{ $a->etudiantabs['prenom_etu']}}</td>
         <td>{{ $a->etudiantabs['nom_etu']}}</td>
         <td>{{ $a->seanceabs['date'] }}</td>
         <td>{{ $a->seanceabs['heure_debut'] }}</td>

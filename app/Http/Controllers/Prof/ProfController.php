@@ -188,13 +188,19 @@ public function historiqueAbsence()
     $seances = Seance::with('seancematiere')->where('id_ens','=',$id_prof)
     ->where('active',1)
     ->get();
-    
-    foreach($seances as $key=>$s){
-        $absence[$key] = $s->absences()->get();   
-    }
+    if(isset($seances))
+    {
+     foreach($seances as $key=>$s){
+        $absence[$key] = $s->absences()->where('etat','=',1)->get();   
+      }
 
+      return view('Enseignant.historiqueAbsence',compact('seances','absence','matieres'));
+    }
+   else{
+        return view('Enseignant.listSeance',['error' => "il n'y a pas d'absences"]);
+   }
+   
      
-   return view('Enseignant.historiqueAbsence',compact('seances','absence','matieres'));
 }
 
 

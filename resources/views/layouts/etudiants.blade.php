@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{asset('etudiants/css/style.css')}}">
     <link rel="stylesheet" href="{{asset('etudiants/profil/style.css')}}">
-    <title>prof</title>
+    <title>Etudiant</title>
+   
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
@@ -22,7 +23,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Accueil <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="{{route('espaceEtudiant')}}">Accueil <span class="sr-only">(current)</span></a>
             </li>   
               
               
@@ -54,7 +55,7 @@
 @yield('content')
   
 
-  <section class="footer text-center">
+  <section class="footer text-center" >
     <div class="container">
       <div class="row">
         <div class="col-md-6  ">
@@ -66,7 +67,7 @@
                   <li><a href="#">Servises</a></li>
                 </ul>
                 <ul class='list-unstyled sosial'>
-                  <li> <a href="https://www.enset-media.ac.ma/"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a> </li>
+                  <li> <a href="https://www.enset-media.ac.ma/" target="_blank"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a> </li>
                   <li> <i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i></li>
                  
                   <li> <i class="fa fa-facebook-square fa-3x" aria-hidden="true"></i></li>

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['namespace' => 'Admin'], function () {
      
-    Route::get('/','adminController@index');
+    Route::get('/','adminController@index')->name("admin.dashbord");
 
     Route::group(['prefix' => 'teacher'], function () {
         

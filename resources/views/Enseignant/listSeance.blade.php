@@ -31,10 +31,10 @@
         </thead>
         <tbody>
           @isset($seances)
-            @foreach ($seances as $seance)
+            @foreach ($seances as $key => $seance)
                  
              <tr>
-               <th scope="row">1</th>
+               <th scope="row">{{$key+1}}</th>
                <td>{{ $seance-> seancematiere -> nom_mat }}</td>
                <td>{{ $seance-> date}}</td>
                <td>{{ $seance-> heure_debut }}</td>

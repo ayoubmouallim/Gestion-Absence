@@ -27,8 +27,8 @@
                    <div class=" col-md-3  col-xs-12 ">
           <div class="feat"> 
             <i class="fa fa-check-square-o" style="font-size:48px;" aria-hidden="true"></i>
-           <h4> Enregistrer les absences</h4>
-           <p class="lead"> Enregistrer les absences à propos les séances que vous avez créés </p>
+           <h4> Noter les absences</h4>
+           <p class="lead">Enregistrer les absences à propos les séances que vous avez créés </p>
            <a href="{{ route('list.seance')}}" class="btn btn-primary">Enregistrer </a>
           </div>
         </div>
@@ -47,7 +47,7 @@
           <div class="feat"> 
             <i class="fa fa-bell-o" style="font-size:48px;" aria-hidden="true"></i>
            <h4>Voir les réclamations </h4>
-           <p class="lead"> Voir les réclamations envoyé par les étudiants </p>
+           <p class="lead"> Voir les réclamations envoyé par les étudiants </p> <br>
            <a  href="{{ route('show.reclamation')}}" class="btn btn-primary">Voir</a>
           </div>
         </div>

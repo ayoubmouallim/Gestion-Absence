@@ -51,12 +51,12 @@ class etudiantController extends Controller
                 ]
                 );
                 //afficher un message de success si  les données des etudiants sont bein enregistrées 
-                return redirect()->route('show.all.student')->with(['success' => ' Etudiant est Bien ajouté ']);
+                return redirect()->route('show.all.student')->with(['success' => 'Etudiant est ajouté avec succès']);
                 
             } catch (\Exception $ex) {
                 //afficher un message d'erreur  si  les données des etudiants ne sont pas bein enregistrées 
-              return $ex;
-                return redirect()->route('add.student')->with(['error' => 'Erreur!!! ']);
+                //return $ex;
+                return redirect()->route('add.student')->with(['error' => 'Erreur ! ']);
         }
     }
    //la fonction utilises dans la modification des données des étudiants 
@@ -64,7 +64,7 @@ class etudiantController extends Controller
     {
         $etudiant=Etudiant::find($id);
         if(!$etudiant)
-           redirect() -> route('show.all.student') -> with(['Erreur' => "Etudiant n'existe pas !!!"]);
+           return redirect() -> route('show.all.student') -> with(['error' => "Etudiant n'existe pas !"]);
          
            $filieres=Filiere::select('id','nom_filiere')->get();
         return view('admin.etudiant.update',compact('filieres','etudiant'));
@@ -90,11 +90,11 @@ class etudiantController extends Controller
                     'id_user'=> 4
                 ]);
                 // un message de success afficher si les données sont bein modifiées 
-                return redirect()->route('show.all.student')->with(['update' => ' Etudiant est Bien modifié ']);
+                return redirect()->route('show.all.student')->with(['update' => 'Etudiant est modifié avec succès  ']);
                 
             } catch (\Exception $ex) {
                 //  // un message d'erreur  s'il y a pas de modification 
-                return redirect()->route('add.student')->with(['error' => 'There is somthing went wrong ']);
+                return redirect()->route('add.student')->with(['error' => 'Erreur !']);
         }
       
     }
@@ -103,10 +103,10 @@ class etudiantController extends Controller
     {
         $student=Etudiant::find($id);
         if(!$student)
-           redirect() -> route('show.all.student') -> with(['error' => 'student Does not exist']);
+           return redirect() -> route('show.all.student') -> with(['error' => "Etudiant n'existe pas !"]);
 
            Etudiant::where('id',$id) -> delete();
-           return redirect()->route('show.all.student')->with(['delete' => 'Etudiant est supprime avec succes']); 
+           return redirect()->route('show.all.student')->with(['delete' => 'Etudiant est supprimé avec succes']); 
     }
 
 }

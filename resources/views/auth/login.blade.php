@@ -126,7 +126,7 @@ text-transform: capitalize;
             </div>
 
              <div class="form-group">
-               <input id="password" type="password"nplaceholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+               <input id="password" type="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
                @error('password')
                    <span class="invalid-feedback" role="alert">
                        <strong>{{ $message }}</strong>
@@ -144,7 +144,7 @@ text-transform: capitalize;
                       </a>
                   @endif
                     </li>
-                    <li><a href="href="{{route('cne.page')}}"">Créer nouveau compte </a></li>
+                    <li><a href="{{route('cne.page')}}">Créer nouveau compte </a></li>
                  </ul> 
            </form>
          </div>

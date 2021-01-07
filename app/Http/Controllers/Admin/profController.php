@@ -22,7 +22,12 @@ class profController extends Controller
     }
 
     public function save(Request $request)
-    {
+    {  
+         $request->validate([
+
+            'tel' => 'required',
+
+         ]);    
         //return $request;
         $user = new User;
         $email= $request->input('email');
@@ -42,14 +47,14 @@ class profController extends Controller
         $adresse = $request->input('adresse');
         $phone = $request->input('tel');
 
-        $prof->nom_ens = $nom;
+        $prof->nom_ens = $nom;          
         $prof->prenom_ens = $prenom;
         $prof->adresse_ens = $adresse;
         $prof->phone_ens = $phone;
         $prof->id_user = $iduser;
         $prof->save();
        
-        return redirect()->route('show.all.prof')->with(['ajoute' => ' Enseignant est Bien Ajoute ']);
+        return redirect()->route('show.all.prof')->with(['ajoute' => 'Enseignant est ajouté avec succès ']);
 
     }
 
@@ -57,7 +62,7 @@ class profController extends Controller
     {
         $prof =Enseignant::find($id);
         if(!$prof)
-           redirect() -> route('show.all.prof') -> with(['Erreur' => "Enseignant n'existe pas !!!"]);
+          return redirect() -> route('show.all.prof') -> with(['error' => "Enseignant n'existe pas !"]);
          
         return view('admin.prof.update',compact('prof'));
     }
@@ -80,11 +85,11 @@ class profController extends Controller
                 'phone_ens' => $request->tel,
             ]);
             // un message de success afficher si les données sont bein modifiées 
-            return redirect()->route('show.all.prof')->with(['success' => ' Enseignant est Bein modifié ']);
+            return redirect()->route('show.all.prof')->with(['success' => ' Enseignant est ajouté avec succès']);
             
         } catch (\Exception $ex) {
             //  // un message d'erreur  s'il y a pas de modification 
-            return redirect()->route('add.prof')->with(['error' => 'There is somthing went wrong ']);
+            return redirect()->route('add.prof')->with(['error' => 'Erreur !']);
     }
 
    
@@ -95,10 +100,10 @@ public function deleteprof($id)
 {
     $prof = Enseignant::find($id);
     if(!$prof)
-       redirect() -> route('show.all.prof') -> with(['error' => 'Enseignant no existe']);
+       return redirect() -> route('show.all.prof') -> with(['error' => "Enseignant n'existe pas !"]);
 
        Enseignant::where('id',$id) -> delete();
-       return redirect()->route('show.all.prof')->with(['delete' => 'enseignant supprime avec succes']); 
+       return redirect()->route('show.all.prof')->with(['delete' => 'Enseignant supprimé avec succès']); 
 }
 
 }

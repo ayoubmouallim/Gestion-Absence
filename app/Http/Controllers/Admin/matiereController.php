@@ -48,12 +48,12 @@ class matiereController extends Controller
                 ]
                 );
                    
-                return redirect()->route('show.all.matiere')->with(['success' => 'Matiere bien Ajoute']);
+                return redirect()->route('show.all.matiere')->with(['success' => 'Matiere est ajouté avec succès']);
                 
             } catch (\Exception $ex) {
                 
                 
-                return redirect()->route('add.matiere')->with(['error' => 'There is somthing went wrong ']);
+                return redirect()->route('add.matiere')->with(['error' => 'Erreur !']);
         }
         
       
@@ -64,7 +64,7 @@ class matiereController extends Controller
 
         $matiere=Matiere::find($id);
         if(!$matiere)
-           redirect() -> route('show.all.matiere') -> with(['error' => 'Matiere Does not exist']);
+          return redirect() -> route('show.all.matiere') -> with(['error' => "Matiere n'existe pas !"]);
          
            $filieres=Filiere::select('id','nom_filiere')->get();
            $semestres=Semestre::select('id','nom_sem')->get();
@@ -92,12 +92,12 @@ class matiereController extends Controller
             'id_ens' => $request->prof,
           ]);
                
-            return redirect()->route('show.all.matiere')->with(['update' => 'Matiere Bien modifie']);
+            return redirect()->route('show.all.matiere')->with(['update' => 'Matiere est modifie avec succès']);
             
         } catch (\Exception $ex) {
             
             
-            return redirect()->route('add.matiere')->with(['error' => 'There is somthing went wrong ']);
+            return redirect()->route('add.matiere')->with(['error' => 'Erreur !']);
     }
       
     }
@@ -106,10 +106,10 @@ class matiereController extends Controller
     {
         $matiere=Matiere::find($id);
         if(!$matiere)
-           redirect() -> route('show.all.matiere') -> with(['error' => 'Matiere Does not exist']);
+           return redirect() -> route('show.all.matiere') -> with(['error' => "Matiere n'existe pas !"]);
 
            Matiere::where('id',$id) -> delete();
-           return redirect()->route('show.all.matiere')->with(['delete' => 'Matiere est supprime avec succes']); 
+           return redirect()->route('show.all.matiere')->with(['delete' => 'Matiere est supprimé avec succes']); 
     }
 
     

@@ -8,7 +8,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Matiere</h1>
+            <h1>Gestion des matières</h1>
           </div>
           
         </div>
@@ -18,15 +18,29 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        @if (Session::has('success'))
-         <div class="alert alert-success"> {{ Session::get('success') }} </div>
-        @endif
-        @if (Session::has('update'))
-         <div class="alert alert-warning"> {{ Session::get('update') }} </div>
-        @endif
-        @if (Session::has('delete'))
-         <div class="alert alert-danger"> {{ Session::get('delete') }} </div>
-        @endif
+                  @if (Session::has('success'))
+                  <div class="col-md-8 offset-md-2">  
+                      <div class="alert  text-center alert-success"> {{ Session::get('success') }} </div>
+                  </div>
+                  @endif
+                  @if (Session::has('update'))
+                  
+                  <div class="col-md-8 offset-md-2">  
+                    <div class="alert  text-center alert-warning"> {{ Session::get('update') }} </div>
+                  </div>
+
+                  @endif
+                  @if (Session::has('delete'))
+                  <div class="col-md-8 offset-md-2">  
+                    <div class="alert  text-center alert-danger"> {{ Session::get('delete') }} </div>
+                  </div>
+                  @endif
+                  @if (Session::has('error'))
+                  <div class="col-md-8 offset-md-2">  
+                    <div class="alert  text-center alert-danger"> {{ Session::get('error') }} </div>
+                  </div>
+                  @endif
+
         <div class="row">
           <div class="col-12">
             <div class="card">

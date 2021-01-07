@@ -96,7 +96,7 @@ text-transform: capitalize;
              <div class="form_icon">
                <i class="fa fa-user-circle"></i>
              </div>
-             <h3 class="title">Enregister</h3>
+             <h3 class="title">Créer Compte</h3>
 
              <div class="form-group">
                 <input placeholder="Username" id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>

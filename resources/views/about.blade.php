@@ -77,9 +77,9 @@
            <img  class="img-circle" src="{{asset('p_accueil/images/yassine.png')}}" alt="pers1">
             <h3> Yassine Mabrouk </h3>
             <p>Elève ingénieur à ENSET Mohammedia</p>
-             <a href="https://www.linkedin.com/in/yassine-mabrouk-9577951b3/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-              <a href="https://github.com/yassine-mabrouk"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
-             <a href="https://www.facebook.com/yassine.mabrouk.90226/"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
+             <a href="https://www.linkedin.com/in/yassine-mabrouk-9577951b3/" target="_blank"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+              <a href="https://github.com/yassine-mabrouk" target="_blank"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+             <a href="https://www.facebook.com/yassine.mabrouk.90226/" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
            
     
          </div>
@@ -89,9 +89,9 @@
            <img  class="img-circle" src="{{asset('p_accueil/images/ayoub.jpeg')}}" alt="pers1">
            <h3>Ayoub Mouallim </h3>
            <p>Elève ingénieur à ENSET Mohammedia</p>
-           <a href="https://www.linkedin.com/in/ayoub-mouallim-a73180b3/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-           <a href="https://github.com/ayoubmouallim"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
-           <a href="https://www.facebook.com/profile.php?id=100027638859348"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
+           <a href="https://www.linkedin.com/in/ayoub-mouallim-a73180b3/" target="_blank"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+           <a href="https://github.com/ayoubmouallim" target="_blank"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+           <a href="https://www.facebook.com/profile.php?id=100027638859348" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
            
     
          </div>
@@ -102,9 +102,9 @@
            <img  class="img-circle" src="{{asset('p_accueil/images/ava.png')}}" alt="pers1">
            <h3> Amine Maslah</h3>
           <p>Elève ingénieur à ENSET Mohammedia</p>
-           <a href="https://www.linkedin.com/in/amine-maslah-239b1917a/"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
-          <a href="https://github.com/a-maslah"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
-           <a href="https://www.facebook.com/amine.maslah.10"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
+           <a href="https://www.linkedin.com/in/amine-maslah-239b1917a/" target="_blank"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+          <a href="https://github.com/a-maslah" target="_blank"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+           <a href="https://www.facebook.com/amine.maslah.10" target="_blank"><i class="fa fa-facebook-square fa-2x" aria-hidden="true" > </i></a>
            
          </div>
         </div>

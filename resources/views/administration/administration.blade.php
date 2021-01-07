@@ -15,8 +15,8 @@
        <div class=" col-md-6  col-xs-12 ">
          <div class="feat"> <!--my div -->
            <i class="fa fa-list-alt" style="font-size:48px;" aria-hidden="true"></i>
-           <h4>Liste des étudiants </h4>
-          <p class="lead">Visualiser la liste des etudiants  dans tous les filières et leur détail d'absence </p>
+           <h4>bilan d'absence des étudiants </h4>
+          <p class="lead">Visualiser la liste des etudiants dans tous les filières et leur détail d'absence </p>
           <a href="{{route('adminiabs') }}" class="btn btn-primary">Start</a>
          </div>
        </div>
