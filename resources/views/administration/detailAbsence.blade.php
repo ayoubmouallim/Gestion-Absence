@@ -6,16 +6,16 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-      <h2> Le Detail d'absence de l'Etudiant(e) : </h2> <br><br>
+      <h2> Détail d'absence de l'étudiant </h2> <br><br>
       <table class="table table-hover table-striped">
   
         <thead class="thead-dark">
           <tr>
             
             <th scope="col">Nom</th>
-            <th scope="col">Prenom</th>
+            <th scope="col">Prénom</th>
             <th scope="col">CNE</th>
-            <th scope="col">Filiere</th>
+            <th scope="col">Filière</th>
             <th scope="col">Heures Total</th>
                                  
           </tr>
@@ -38,10 +38,10 @@
  <br><br>
  <ul class="nav nav-tabs md-tabs" id="myTabMD" >
                 <li class="nav-item waves-effect waves-light">
-                  <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab" aria-controls="home-md" aria-selected="true">Absence par Seance</a>
+                  <a class="nav-link active" id="home-tab-md" data-toggle="tab" href="#home-md" role="tab" aria-controls="home-md" aria-selected="true">Absence par séance</a>
                 </li>
                 <li class="nav-item waves-effect waves-light">
-                  <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab" aria-controls="profile-md" aria-selected="false">Absence par Matiere</a>
+                  <a class="nav-link" id="profile-tab-md" data-toggle="tab" href="#profile-md" role="tab" aria-controls="profile-md" aria-selected="false">Absence par Matière</a>
                 </li>
                 
               </ul>
@@ -55,7 +55,7 @@
                     <thead class="thead-dark">
                       <tr>
                         <th scope="col">Numero</th>
-                        <th scope="col">Matiere</th>
+                        <th scope="col">Matière</th>
                         <th scope="col">Date</th>
                         <th scope="col">Heure Debut</th>
                         <th scope="col">Heure Fin</th>
@@ -89,8 +89,8 @@
                     <thead class="thead-dark">
                       <tr>
                         <th scope="col">Numero</th>
-                        <th scope="col">Matiere</th>                        
-                        <th scope="col">Nombre D'heures</th>                        
+                        <th scope="col">Matière</th>                        
+                        <th scope="col">Nombre d'heures</th>                        
                       </tr>
         
                     </thead>

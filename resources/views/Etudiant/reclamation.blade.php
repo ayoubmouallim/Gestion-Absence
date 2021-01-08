@@ -55,6 +55,7 @@
                           <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                        </div>
+                       
                        <input type="hidden" name="id_etu" value="{{ $id_etu }}"> 
                        <div class="form-group" style="margin-top: 15px">
                            <input type="submit" class=" btn btn-primary " value="Envoyer">

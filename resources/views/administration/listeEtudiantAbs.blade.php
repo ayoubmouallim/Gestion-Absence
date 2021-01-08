@@ -6,7 +6,7 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-      <h2>Liste  des Etudiants</h2> <br><br>
+      <h2>Liste  des étudiants</h2> <br><br>
   
       <div class="row">
         <div class="col-md-4" style=" margin-left:66% ">
@@ -23,9 +23,9 @@
         <thead class="thead-dark">
           <tr>
             <th scope="col">CNE</th>
-            <th scope="col">Nom Etudiant(e)</th>
-            <th scope="col">Prenom Etudiant(e)</th>
-            <th scope="col">Filiere</th>
+            <th scope="col">Nom étudiant(e)</th>
+            <th scope="col">Prénom Etudiant(e)</th>
+            <th scope="col">Filière</th>
             <th scope="col">Detail absence</th>
                               
           </tr>

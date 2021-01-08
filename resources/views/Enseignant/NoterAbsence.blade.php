@@ -17,8 +17,8 @@
         <thead class="bg-primary">
           <tr>
             <th scope="col">Nom</th>
-            <th scope="col">Prenom</th>
-            <th scope="col">Etat <br> Present(e) - Absent(e) </th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Etat <br> Présent(e) - Absent(e) </th>
             <th scope="col">Justification</th>
           </tr>
         </thead>

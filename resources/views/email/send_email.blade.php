@@ -15,7 +15,7 @@
 }
 
 .form-bg {
-    background: lightblue ;
+    background:rgb(221, 218, 218);
     padding: 20px
 }
 
@@ -90,7 +90,7 @@ button.btn {
    </div>
    @endif
                 <div class="form-bg">
-                <h3 align="center">Envoyer un avertissement d'absence aux Etudiants</h3><br />
+                <h3 align="center">Envoyer un avertissement à un étudiant </h3><br />
 
                     <form class="form" method="post"  action="{{ route('send')}}">
                     @csrf

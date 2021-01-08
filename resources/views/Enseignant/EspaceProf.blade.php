@@ -8,7 +8,7 @@
      <h1>Espace <span>enseignant</span> </h1>
      <p class="lead">Bienvenue dans votre espace ,vous pouvez utiliser cette application
         <strong> Gestion des absences </strong> pour créer des séances et enregistrer
-      et consulter l'historique d'absence des étudiants 
+      et consulter l'historique des absences des étudiants 
      </p>
     </div>
    </section>
@@ -39,7 +39,7 @@
           <div class="feat"> 
             <i class="fa fa-newspaper-o" style="font-size:48px;" aria-hidden="true"></i>
            <h4>Consulter l'historique </h4>
-           <p class="lead"> Consulter l'historique d'absence des etudiants dans votre matière</p>
+           <p class="lead"> Consulter l'historique d'absence des étudiants dans votre matière</p>
            <a href="{{ route('historique.absence')}}" class="btn btn-primary">Consulter</a>
           </div>
         </div>

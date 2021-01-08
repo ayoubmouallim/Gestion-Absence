@@ -8,12 +8,12 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-  <h1>Consulter Vos Propres Absences</h1>
+  <h1>Liste des absences</h1>
  
       <div class="row">
         <div class="col-md-4">
             <select class="form-control" id="matiereDropdown">
-                <option value="All">All Matiere</option>
+                <option value="All">Tout les matière</option>
                 @foreach($matieres as $mat)
                 <option value="{{ $mat-> nom_mat }}">{{ $mat -> nom_mat }}</option>
                 @endforeach
@@ -22,7 +22,7 @@
         </div>
         <div class="col-md-4">
             <select class="form-control" id="filiereDropdown">
-                <option value="All">All</option>
+                <option value="All">Tout filières</option>
                 <option value="GLSID2">GLSID2</option>
                 <option value="BDCC2">BDCC2</option>
             </select>
@@ -40,14 +40,14 @@
   
         <thead class="thead-dark">
           <tr>
-            <th scope="col">Nom Etudiant(e)</th>
+            <th scope="col">Nom </th>
             <th scope="col">Etat</th>
             <th scope="col">Date</th>
             <th scope="col">Heure Debut</th>
             <th scope="col">Heure Fin</th>
             <th scope="col">Type</th>
-            <th scope="col">Matiere</th>
-            <th scope="col">Filiere</th>
+            <th scope="col">Matière</th>
+            <th scope="col">Filière</th>
             <th scope="col">Semestre</th>
                               
           </tr>

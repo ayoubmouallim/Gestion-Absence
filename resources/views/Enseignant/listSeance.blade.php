@@ -8,7 +8,7 @@
    <section class="features text-center">
     <div class="container">
       <br><br>
-      <h1>Liste des Seances</h1>
+      <h1>Liste des séances</h1>
       
       @if (Session::has('success'))
       <div class="alert alert-success"> {{ Session::get('success') }} </div>
@@ -21,7 +21,7 @@
         <thead >
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Matiere</th>
+            <th scope="col">Matière</th>
             <th scope="col">Date</th>
             <th scope="col">Heure Debut</th>
             <th scope="col">Heure Fin</th>
