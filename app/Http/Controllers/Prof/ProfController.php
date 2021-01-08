@@ -19,6 +19,8 @@ use Auth;
 
 class ProfController extends Controller
 {
+
+   
     public function index()
     {
         return view('Enseignant.EspaceProf');

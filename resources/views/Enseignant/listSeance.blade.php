@@ -17,8 +17,8 @@
       <div class="alert alert-danger"> {{ Session::get('error') }} </div>
       @endif
  
-      <table class="table table-hover table-striped">
-        <thead>
+      <table class="table table-hover table-striped table-responsive-md" >
+        <thead >
           <tr>
             <th scope="col">#</th>
             <th scope="col">Matiere</th>
@@ -41,7 +41,7 @@
                <td>{{ $seance-> heure_fin }}</td>
                <td>{{ $seance-> type }}</td>
                <td><a href="{{ route('pageAbsence',$seance->id)}}">  
-               <button class="btn btn-success btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled
+               <button class="btn btn-success btn-sm rounded-2 " type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled
                @endif>Noter Absences  <i class="fa fa-edit"></i></button></a>
                <a href="{{ route('edit.seance',$seance->id) }}">  
                 <button class="btn btn-warning btn-sm rounded-2" type="button" data-toggle="tooltip" data-placement="top" title="Edit" @if ($seance->active == 1 ) disabled 

@@ -41,7 +41,7 @@
                                     <h2 class="text-center">
                                         {{$e->prenom_etu}} {{$e->nom_etu}} 
                                     </h2>
-                                <p class="lead">Etudiant à l'ecole normale supérieure de l'enseignement technique de l'université Hassan II de Casablanca (UH2C)
+                                <p class="lead">Etudiant(e) à l'Ecole Normale Supérieure de l'Enseignement Technique Mohammedia de l'université Hassan II de Casablanca (UH2C)
                                 </p>  
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
                                     <li class="nav-item">
@@ -81,7 +81,7 @@
                                
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Gmail</label>
+                                        <label>Email</label>
                                     </div>
                                     <div class="col-md-6">
                                         <p>{{$e->user->email}}</p>

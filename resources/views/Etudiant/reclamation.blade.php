@@ -18,7 +18,7 @@
 
            
            <div class="card">
-             <div class="card-header">
+             <div class="card-header bg-light">
                <h3 class=" text-center">Envoyer une réclamation</h3>
              </div>
 

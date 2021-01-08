@@ -15,7 +15,7 @@
 }
 
 .form-bg {
-    background: blue;
+    background: lightblue ;
     padding: 20px
 }
 

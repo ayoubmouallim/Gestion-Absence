@@ -29,7 +29,7 @@
                   Services
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{ route('adminiabs') }}">Liste des étudiants  </a>
+                <a class="dropdown-item" href="{{ route('adminiabs') }}">Bilan d'absence des étudiants  </a>
                   <a class="dropdown-item" href="#"> Envoyer des avertissemets</a>
                   </div>
               </li>
@@ -62,8 +62,7 @@
                 <ul class="list-unstyled  three-columns">
                   <li><a href="#">Acueil</a></li>
                   <li><a href="#">A propos</a></li>
-                  <li><a href="#">Servises</a></li>
-                  <li><a href="#">Servises</a></li>
+                  <li><a href="#">Services</a></li>
                 </ul>
                 <ul class='list-unstyled sosial'>
                   <li> <a href="https://www.enset-media.ac.ma/" target="_blank"><i class="fa fa-google-plus-square fa-3x" aria-hidden="true"></i></a> </li>

@@ -14,6 +14,7 @@ use Illuminate\Http\UploadedFile;
 
 class etudiantController extends Controller
 {
+   
     public function index()
     {
         return view('Etudiant.EspaceEtudiant');

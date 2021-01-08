@@ -6,7 +6,7 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-      <h2>Liste des Etudiants</h2> <br><br>
+      <h2>Liste  des Etudiants</h2> <br><br>
   
       <div class="row">
         <div class="col-md-4" style=" margin-left:66% ">
@@ -52,7 +52,7 @@
         </tbody>
       </table>
       <div class="clearfix  justify-content-end">
-				<div class="hint-text">Voir  <b>6</b>&nbsp; Etudiants Absences par Page</div>
+				<div class="hint-text">Voir  <b>6</b>&nbsp; Etudiants par Page</div>
 				<ul class="pagination">
         <li class="page-item " >{{ $etudiants->links() }}</li>
 				</ul>

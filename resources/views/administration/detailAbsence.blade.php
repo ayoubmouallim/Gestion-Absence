@@ -6,7 +6,7 @@
 <section class="features text-center">
     <div class="container">
       <br><br>
-      <h2>Etudiants </h2> <br><br>
+      <h2> Le Detail d'absence de l'Etudiant(e) : </h2> <br><br>
       <table class="table table-hover table-striped">
   
         <thead class="thead-dark">

@@ -12,6 +12,10 @@ use App\Etudiant;
 
 class etudiantController extends Controller
 {
+    public function __construct()
+{
+    $this->middleware('auth');
+}
     //la fonction qui permet de retourner le data du filiere u 
     public function addStudent()
     {    

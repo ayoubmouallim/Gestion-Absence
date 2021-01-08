@@ -10,14 +10,14 @@
 
   <section class="features text-center">
    <div class="container">
-     <h1>Servises</h1>
+     <h1>Services</h1>
      <div class="row"><!-- featues1 -->
        <div class=" col-md-6  col-xs-12 ">
          <div class="feat"> <!--my div -->
            <i class="fa fa-list-alt" style="font-size:48px;" aria-hidden="true"></i>
-           <h4>bilan d'absence des étudiants </h4>
+           <h4>Bilan d'absence des étudiants </h4>
           <p class="lead">Visualiser la liste des etudiants dans tous les filières et leur détail d'absence </p>
-          <a href="{{route('adminiabs') }}" class="btn btn-primary">Start</a>
+          <a href="{{route('adminiabs') }}" class="btn btn-primary">Consulter</a>
          </div>
        </div>
         
@@ -27,7 +27,7 @@
            <i class="fa fa-pencil"  style="font-size:48px;" aria-hidden="true"></i>
           <h4>Envoyer des avertissemets</h4>
           <p class="lead"> Envoyer des avertissements aux étudiants qui ont beaucoup des absences</p>
-          <a href="{{route('sendEmail')}}" class="btn btn-primary">Start</a>
+          <a href="{{route('sendEmail')}}" class="btn btn-primary">Envoyer</a>
          </div>
        </div>
      </div>

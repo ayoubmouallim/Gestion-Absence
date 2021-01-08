@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 
 class administrationController extends Controller
 {
+
+  
     public function ListeEtudiantsAbs(){
  
 

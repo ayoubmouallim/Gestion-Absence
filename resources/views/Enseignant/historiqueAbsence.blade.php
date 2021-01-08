@@ -11,7 +11,7 @@
       <div class="row">
         <div class="col-md-4">
             <select class="form-control" id="matiereDropdown">
-                <option value="All">tous les matéres</option>
+                <option value="All">tous les matiéres</option>
                 @foreach ($matieres as $matiere)
                     <option value="{{ $matiere -> nom_mat }}">{{ $matiere -> nom_mat }}</option>
                 @endforeach
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-4">
             <select class="form-control" id="filiereDropdown">
-                <option value="All">tous</option>
+                <option value="All">tous les filieres</option>
                 <option value="GLSID2">GLSID2</option>
                 <option value="BDCC2">BDCC2</option>
             </select>

@@ -58,7 +58,7 @@
           <input type="hidden" name="id_sea" value=" {{ $seance->id }} ">
         </tbody>
       </table>
-      <input type="submit" class="btn btn-primary btn-lg" value="submit">
+      <input type="submit" class="btn btn-primary btn-lg" value="Enregistrer Modification">
     </form>
      
    </div>

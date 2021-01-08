@@ -12,6 +12,10 @@ use App\Enseignant;
 class matiereController extends Controller
 {
    
+    public function __construct()
+{
+    $this->middleware('auth');
+}
 
     public function addMatiere()
     {

@@ -10,12 +10,12 @@
             @if (Session::has('delete'))
             <div class="alert alert-danger text-center"> {{ Session::get('delete') }} </div>
            @endif
-            <div class="card">
+            <div class="card mt-5">
               <div class="card-header">
-                <h3 class=" text-center">Réclamation</h3>
+                <h3 class=" text-center">Liste des Réclamations </h3>
               </div>
                
-              <div class="card-body">
+              <div class="card-body p-5">
                 <ul class="list-group">
                   @foreach ($recs as $rec)
                   <li class="list-group-item">
