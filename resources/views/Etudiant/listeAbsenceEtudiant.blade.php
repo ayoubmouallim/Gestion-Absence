@@ -11,7 +11,7 @@
   <h1>Liste des absences</h1>
  
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-6">
             <select class="form-control" id="matiereDropdown">
                 <option value="All">Tout les matière</option>
                 @foreach($matieres as $mat)
@@ -20,16 +20,9 @@
 
             </select>
         </div>
-        <div class="col-md-4">
-            <select class="form-control" id="filiereDropdown">
-                <option value="All">Tout filières</option>
-                <option value="GLSID2">GLSID2</option>
-                <option value="BDCC2">BDCC2</option>
-            </select>
-        </div>
-
+    
         
-        <div class="col-md-4">
+        <div class="col-md-6">
             <input type="date" class="form-control" id="dateDropdown">
         </div>
         

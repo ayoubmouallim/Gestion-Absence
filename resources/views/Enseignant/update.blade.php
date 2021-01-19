@@ -3,7 +3,7 @@
 
  @section('content')
   
-   <section class="features text-center">
+   <section class="features ">
     <div class="conctainer-fluid">
       <div class="row">
         <div class="col-md-8 offset-md-2">

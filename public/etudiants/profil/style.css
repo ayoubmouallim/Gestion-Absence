@@ -14,17 +14,16 @@
     padding-bottom: 30px;
 }
 .profile-img{
-    text-align: center;
-    
+    text-align: center; 
 }
 
 .profile-img img{
+    padding-top: 40px;
     width: 70%;
     height: 100%;
-    padding-top: 40px;
-    
-    
+
 }
+
 .profile-img .file {
     position: relative;
     overflow: hidden;

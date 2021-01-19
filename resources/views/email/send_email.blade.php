@@ -94,9 +94,11 @@ button.btn {
 
                     <form class="form" method="post"  action="{{ route('send')}}">
                     @csrf
+                    
                         <div class="form-group"> <label class="sr-only">Name</label> <input name="name" type="text" class="form-control"  placeholder="Enter le nom de Etudiant(e)"> </div>
-                        <div class="form-group"> <label class="sr-only">Email</label> <input name="email" type="email" class="form-control"  placeholder="Entrer adresse Email"> </div>
-                        <div class="form-group"> <label class="sr-only">Name</label> <textarea name="message" class="form-control"  rows="7" placeholder="Entrer le message"></textarea> </div>
+                        <div class="form-group"> <label class="sr-only">Email</label> <input name="email" type="email" class="form-control"  placeholder="Entrer adresse Email" value=""> </div>
+                        <div class="form-group"> <label class="sr-only">Name</label> <textarea name="message" class="form-control lead"  rows="7" placeholder="Entrer le message">        Par la présente, nous vous informons que nous avons décidé de prendre à votre encontre une mesure disciplinaire eu égard à votre comportement fautif que vous avez eu, à savoir : (exemple : dépassement nombre des heurs dans une  matière). La sanction retenue à cet effet est un avertissement. Nous vous conseillons vivement de prêter attention, à l’avenir, à vos agissements afin d’éviter la prise d’une nouvelle sanction beaucoup plus fâcheuse.
+                        </textarea> </div>
                          <button type="submit" class="btn text-center btn-info">Envoyer Email</button>
                     </form>
                 </div>
