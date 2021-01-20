@@ -43,21 +43,25 @@
                  <form  action=" {{ route('updateprof',$prof->id ) }}" method="POST" >
                   @csrf
                   @method('PUT')
-                  @error('nom')
-                  <div class="alert alert-danger "> {{ $message }} </div>
-                 @enderror
-                
+              
+                  <div class="col-md-8 offset-md-2">  
                  @if (Session::has('error'))
                      <div class="alert alert-danger"> {{ Session::get('error') }} </div>
                  @endif
-
+                  </div>
                   <label>Nom</label>
                   <input type="text" name="nom" class="form-control" value="{{  old('nom',$prof->nom_ens) }}">
+                  @error('nom')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                  </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                    <label>Prenom</label>
+                    <label>Prénom</label>
                     <input type="text" name="prenom" class="form-control" value="{{  old('prenom',$prof->prenom_ens) }}">
+                    @error('prenom')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
               </div>
 
@@ -65,11 +69,17 @@
                  <div class="form-group">
                   <label>Adresse</label>
                   <input type="text" name="adresse" class="form-control " value="{{  old('adresse',$prof->adresse_ens) }}">
+                  @error('adresse')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                  </div>
                 <!-- /.form-group -->
                   <div class="form-group">
-                    <label>Numero de Telephone</label>
+                    <label>Numéro de Téléphone</label>
                     <input type="text" name="tel" class="form-control " value="{{  old('tel',$prof->phone_ens) }}">
+                    @error('tel')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
                 <!-- /.form-group -->
               </div>

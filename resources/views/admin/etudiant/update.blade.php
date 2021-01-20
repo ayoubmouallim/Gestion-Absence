@@ -37,27 +37,32 @@
           <!-- /.card-header -->
           <div class="card-body">
             <div class="row">
-
-              <div class="col-md-6">
-                 <div class="form-group">
+               
+             
+              <div class="col-md-8 offset-md-2">
+             @if (Session::has('error'))
+                 <div class="alert alert-danger"> {{ Session::get('error') }} </div>
+             @endif
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
                  <form  action="{{ route("update.student") }}" method="POST" >
                   @csrf
-                  @error('nom')
-                  <div class="alert alert-danger "> {{ $message }} </div>
-                 @enderror
+               
                 
-                 @if (Session::has('error'))
-                     <div class="alert alert-danger"> {{ Session::get('error') }} </div>
-                 @endif
-                
-
                   <label>CNE</label>
                   <input type="text" name="cne" class="form-control" value="{{ $etudiant->cne }}">
+                  @error('cne')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                  </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Nom</label>
                     <input type="text" name="prenom" class="form-control" value="{{ $etudiant->nom_etu }}">
+                    @error('prenom')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
               </div>
 
@@ -65,17 +70,23 @@
                  <div class="form-group">
                   <label>Prenom</label>
                   <input type="text" name="nom" class="form-control " value="{{ $etudiant->prenom_etu }}">
+                  @error('nom')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                  </div>
                 <!-- /.form-group -->
                   <div class="form-group">
                     <label>Phone</label>
                     <input type="text" name="phone" class="form-control " value="{{ $etudiant->phone_etu }}">
+                    @error('phone')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
                 <!-- /.form-group -->
               </div>
               <div class="col-md-6">
               <div class="form-group">
-                <label>Filiere</label>
+                <label>Filière</label>
                 <select class="form-control select2" style="width: 100%;" name="filiere">
                     @isset($filieres)
                     @foreach ($filieres as $filiere)

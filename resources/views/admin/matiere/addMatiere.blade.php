@@ -38,24 +38,25 @@
             <form action="{{ route("save.matiere") }}" method="post">
              
               @csrf
-              @error('nom')
-              <div class="alert alert-danger "> {{ $message }} </div>
-          @enderror
-            
+          
+              <div class="col-md-8 offset-md-2">  
              @if (Session::has('error'))
                  <div class="alert alert-danger"> {{ Session::get('error') }} </div>
              @endif
+             </div>
             
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
                   <label>Nom</label>
                   <input type="text" name="nom" class="form-control ">
-                  
+                  @error('nom')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                    <label>Filiere</label>
+                    <label>Filière</label>
                     <select class="form-control select2" style="width: 100%;" name="filiere">
                       @isset($filieres)
                       @foreach ($filieres as $filiere)
@@ -72,7 +73,7 @@
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Prof</label>
+                    <label>Enseignant</label>
                     <select class="form-control select2" style="width: 100%;" name="prof">
                       @isset($profs)
                       @foreach ($profs as $prof)

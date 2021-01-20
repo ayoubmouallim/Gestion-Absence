@@ -19,7 +19,7 @@
        
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Modifier Matiere</h3>
+        <h3 class="card-title">Modifier Matière</h3>
 
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -36,23 +36,24 @@
         <form action="{{ route("update.matiere") }}" method="post">
          
           @csrf
-          @error('nom')
-          <div class="alert alert-danger "> {{ $message }} </div>
-         @enderror
+          <div class="col-md-8 offset-md-2">  
          @if (Session::has('error'))
              <div class="alert alert-danger"> {{ Session::get('error') }} </div>
          @endif
-        
+        </div>
+
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label>Nom</label>
             <input type="text" name="nom" class="form-control" value="{{ $matiere->nom_mat }}">
-              
+            @error('nom')
+            <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+           @enderror
             </div>
             <!-- /.form-group -->
             <div class="form-group">
-                <label>Filiere</label>
+                <label>Filière</label>
                 <select class="form-control select2" style="width: 100%;" name="filiere">
                   @isset($filieres)
                   @foreach ($filieres as $filiere)
@@ -69,7 +70,7 @@
           <!-- /.col -->
           <div class="col-md-6">
             <div class="form-group">
-                <label>Prof</label>
+                <label>Enseignant</label>
                 <select class="form-control select2" style="width: 100%;" name="prof">
                   @isset($profs)
                   @foreach ($profs as $prof)

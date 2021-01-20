@@ -43,11 +43,17 @@
                 @csrf
                   <label>Email</label>
                   <input type="email" name="email" class="form-control">
+                  @error('email')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
                     <label>Password</label>
                     <input type="password" name="password" class="form-control">
+                    @error('password')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -55,11 +61,17 @@
                 <div class="form-group">
                   <label>Nom</label>
                   <input type="text" name="nom" class="form-control ">
+                  @error('nom')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                 </div>
                 <!-- /.form-group -->
                 <div class="form-group">
-                    <label>Prenom</label>
+                    <label>Prénom</label>
                     <input type="text" name="prenom" class="form-control ">
+                    @error('prenom')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
                 <!-- /.form-group -->
               </div>
@@ -67,6 +79,9 @@
                 <div class="form-group">
                   <label>Adresse</label>
                   <input type="text" name="adresse" class="form-control ">
+                  @error('adresse')
+                  <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                 @enderror
                 </div>
                 <!-- /.form-group -->
             
@@ -75,8 +90,11 @@
               <!-- /.col -->
               <div class="col-md-6">
                 <div class="form-group">
-                    <label>Numero de Telephone</label>
+                    <label>Numero de Téléphone</label>
                     <input type="int" name="tel" class="form-control">
+                    @error('tel')
+                    <div class="alert alert-danger btn-sm" style="background: none; border:none;color:red" > {{ $message }} </div>
+                   @enderror
                   </div>
                 <!-- /.form-group -->
             
@@ -93,29 +111,11 @@
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
-        <div class="col-md-8 offset-md-2">
-       @error('nom')
-                  <div class="alert alert-danger"> {{ $message }} </div>
-                 @enderror
-
-               @error('prenom')
-                  <div class="alert alert-danger"> {{ $message }} </div>
-                 @enderror
-                 @error('adresse')
-                  <div class="alert alert-danger "> {{ $message }} </div>
-                 @enderror
-                 @error('tel')
-                  <div class="alert alert-danger "> {{ $message }} </div>
-                 @enderror
-                 </div>
       
-      
-      </div>
 
       <!-- /.container-fluid -->
     </section>
     <!-- /.content -->
   </div>
-
 
   @endsection
