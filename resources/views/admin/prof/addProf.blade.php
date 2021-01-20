@@ -86,17 +86,28 @@
 <button type="submit" class="btn btn-primary">Ajouter</button>
           
 </form>      
-  
 
-              
             </div>
-
+           
           </div>
           <!-- /.card-body -->
         </div>
         <!-- /.card -->
+        <div class="col-md-8 offset-md-2">
+       @error('nom')
+                  <div class="alert alert-danger"> {{ $message }} </div>
+                 @enderror
 
-      
+               @error('prenom')
+                  <div class="alert alert-danger"> {{ $message }} </div>
+                 @enderror
+                 @error('adresse')
+                  <div class="alert alert-danger "> {{ $message }} </div>
+                 @enderror
+                 @error('tel')
+                  <div class="alert alert-danger "> {{ $message }} </div>
+                 @enderror
+                 </div>
       
       
       </div>

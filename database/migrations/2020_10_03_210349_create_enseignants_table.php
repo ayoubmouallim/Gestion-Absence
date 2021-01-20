@@ -18,7 +18,7 @@ class CreateEnseignantsTable extends Migration
             $table->engine = 'InnoDB';
             $table->string('nom_ens');
             $table->string('prenom_ens');
-            $table->integer('phone_ens');
+            $table->string('phone_ens');
             $table->text('adresse_ens');
             $table->timestamps();
         });

@@ -27,11 +27,12 @@ class profController extends Controller
 
     public function save(Request $request)
     {  
-         $request->validate([
-
-            'tel' => 'required',
-
-         ]);    
+        $request->validate([
+            'prenom' => 'required', 
+            'nom'=> 'required ',
+            'adresse'=>'required',
+            'tel'=>'required',
+            ]);   
         //return $request;
         $user = new User;
         $email= $request->input('email');

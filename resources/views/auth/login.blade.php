@@ -139,6 +139,7 @@ text-transform: capitalize;
                 <button  type="submit" class="btn btn-primary  ">{{ __('CONNECTER') }}</button>
                 <ul class="form-options">
                   <li>
+                  
                       @if (Route::has('password.request'))
                       <a class="btn btn-link" href="{{ route('password.request') }}" >
                         Mot de passe oublié ?

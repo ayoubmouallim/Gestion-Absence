@@ -14,16 +14,16 @@ class UserRoleSeeder extends Seeder
         //
         $superadmin = App\User::create([
             'id_role' => 1,
-            'name' => 'superadmin',
-            'email' => 'superadmin@app.com',
-            'password' => bcrypt('superadmin')
+            'name' => 'admin',
+            'email' => 'admin@app.com',
+            'password' => bcrypt('admin')
      ]);
 
      $admin = App\User::create([
          'id_role' => 2,
-        'name' => 'admin',
-        'email' => 'admin@admin.com',
-        'password' => bcrypt('admin')
+        'name' => 'administration',
+        'email' => 'administration@service.com',
+        'password' => bcrypt('administration')
  ]);
 
  $prof = App\User::create([
